@@ -1,0 +1,30 @@
+{% extends "./partials/base.njk" %}
+
+{%- block main %}
+<div class="container margin-4-tb text-align-center">
+  <h1 class="heading-6 dls-deep-blue margin-3-tb">
+    <span class="dls-logo-line-lg">
+      <img src="{{ constants.AXP_STATIC_ASSETS_DIST }}/img/logos/dls-logo-line.svg" alt="American Express" />
+    </span>
+    <div class="margin-1-t">Paid Search</div>
+  </h1>
+  <div class="row flex-justify-center margin-2-tb">
+    <div class="col col-xs-12 col-sm-10 col-md-5 col-lg-4 col-xl-3 pad-1 stack">
+      {% for category in cardCategories %}
+      <a
+        class="fluid btn btn-secondary flex-inline flex-align-items-stretch flex-justify-center"
+        href="low-funnel-{{ category.key }}.html"
+      >
+        <span class="margin-1-r icon icon-sm {{ category.iconClass }}"></span>
+        <span>Low Funnel ({{ category.label }})</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="row flex-justify-center margin-2-tb">
+    <div class="pad-1-lr">
+      <a class="btn btn-primary" href="card-data.html">See Card data</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

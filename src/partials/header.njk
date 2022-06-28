@@ -1,0 +1,28 @@
+<header class="block--header pad-1-tb border-b">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 flex flex-justify-between">
+        <div class="flex">
+          <div class="logo dls-logo-bluebox-solid-sm margin-1-r">
+            <img
+              src="{{ constants.AXP_STATIC_ASSETS_DIST }}/img/logos/dls-logo-bluebox-solid.svg"
+              alt="American Express"
+            />
+          </div>
+          <div class="dont-do-business-without-it">
+            <img
+              src="{{ header.dontDoBusinessWithoutIt.imageSrc }}"
+              alt="{{ header.dontDoBusinessWithoutIt.imageAlt }}"
+            />
+          </div>
+        </div>
+        <div class="flex flex-column flex-justify-center flex-align-items-center">
+          <div class="legal-1">{{ header.callNow.label }}</div>
+          <a class="heading-3 dls-black" href="tel:{{ header.callNow.phone | replace('-', '') }}">
+            {{ header.callNow.phone }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

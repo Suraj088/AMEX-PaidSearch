@@ -1,0 +1,73 @@
+{
+  "name": "mbbi-0252-paid-search",
+  "version": "0.0.1",
+  "description": "American Express - Paid Search Landing Page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "webpack --config=webpack.serve.js",
+    "build": "webpack",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "npx prettier --write .",
+    "format:check": "npx prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/weareswirl/amex/mbbi-0252-paid-search.git"
+  },
+  "author": "Emilio Martinez-Cordero <emilio.martinez@dentsumb.com>",
+  "license": "UNLICENSED",
+  "engineStrict": true,
+  "engines": {
+    "node": "^12.13.0 || ^14.15.0 || ^16.13.0"
+  },
+  "dependencies": {
+    "@reach/auto-id": "0.11.0",
+    "classnames": "2.2.6",
+    "preact": "10.4.8",
+    "react-swipeable": "6.2.0"
+  },
+  "devDependencies": {
+    "@types/classnames": "2.2.10",
+    "@types/node": "14.6.0",
+    "@types/nunjucks": "3.1.3",
+    "@types/webpack": "4.41.21",
+    "@types/webpack-dev-server": "3.11.0",
+    "@typescript-eslint/eslint-plugin": "3.10.1",
+    "@typescript-eslint/parser": "3.10.1",
+    "clean-webpack-plugin": "3.0.0",
+    "copy-webpack-plugin": "6.4.1",
+    "css-loader": "4.2.2",
+    "cssnano": "4.1.10",
+    "eslint": "7.7.0",
+    "eslint-config-prettier": "6.11.0",
+    "file-loader": "6.0.0",
+    "fork-ts-checker-webpack-plugin": "5.1.0",
+    "fs-extra": "9.0.1",
+    "html-loader": "1.3.0",
+    "html-webpack-plugin": "4.3.0",
+    "import-fresh": "3.2.1",
+    "markdown-it": "11.0.0",
+    "markdown-it-sup": "1.0.0",
+    "mini-css-extract-plugin": "0.10.0",
+    "netlify-cli": "2.63.2",
+    "nunjucks": "3.2.2",
+    "postcss-loader": "3.0.0",
+    "postcss-preset-env": "6.7.0",
+    "prettier": "2.1.1",
+    "sass": "1.26.10",
+    "sass-loader": "10.0.1",
+    "strip-indent": "3.0.0",
+    "style-loader": "1.2.1",
+    "ts-loader": "8.0.3",
+    "typescript": "4.0.2",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12",
+    "webpack-plugin-serve": "1.0.1",
+    "webpack-watch-files-plugin": "1.0.3"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/weareswirl/amex/mbbi-0252-paid-search/issues"
+  },
+  "homepage": "https://gitlab.com/weareswirl/amex/mbbi-0252-paid-search#readme"
+}

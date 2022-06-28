@@ -1,0 +1,40 @@
+<section class="block--card-membership dls-gray-01-bg margin-7-t">
+  <div class="container">
+    <div class="row flex-justify-center">
+      <div class="col-lg-10">
+        <h2 class="heading-6 text-align-center hidden-sm-down">
+          {{ cardMembership.heading | markdown(true) | safe }}
+        </h2>
+        <h2 class="heading-5 text-align-left hidden-md-up">
+          {{ cardMembership.heading | markdown(true) | safe }}
+        </h2>
+      </div>
+    </div>
+
+    <div class="row flex-justify-center margin-2-t">
+      <div class="col-xs-11 col-sm-12">
+        <div class="row flex-justify-center">
+          {%- for cmItem in cardMembership.items %}
+          <section class="block--card-membership--item text-align-center col-xs-12 col-md-6 col-lg-3 pad-2-lr margin-2-t">
+            <div class="content">
+              <div>
+                <i class="icon icon-lg {{ cmItem.iconClass }} dls-bright-blue margin-2-b"></i>
+              </div>
+              <h3 class="heading-3 margin-2-b">
+                {{ cmItem.title | safe }}
+              </h3>
+              {%- for cmItemParagraph in cmItem.content %}
+              <p class="legal-1">
+                {{ cmItemParagraph | markdown(true) | safe }}
+              </p>
+              {%- endfor %}
+            </div>
+          </section>
+          {%- endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="block--card-sticky-nav" class="block--card-sticky-nav border-dark-t"></section>

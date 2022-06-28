@@ -1,0 +1,53 @@
+@use "sass:meta";
+@use "sass:math";
+@use "sass:string";
+
+$_block-spacing-unit: 0.625rem;
+
+@function _is-integer($value) {
+  @return meta.type-of($value) == 'number' and math.round($value) == $value;
+}
+/**
+ * Usage example:
+ * ```
+ * @include spacing.create-spacing-util(6);
+ *
+ * @media (min-width: 1024px) {
+ *   @include spacing.create-spacing-util(6, 'lg-up');
+ * }
+ * ```
+ */
+@mixin create-spacing-util($multiplier, $suffix: null) {
+  @if _is-integer($multiplier) != true {
+    @error "$multiplier should be integer";
+  }
+
+  $_value: $_block-spacing-unit * $multiplier;
+  $_suffix: if(meta.type-of($suffix) == 'string', '-' + $suffix, null);
+
+  .pad-#{$multiplier}-t#{$_suffix} {
+    padding-top: $_value !important;
+  }
+
+  .pad-#{$multiplier}-b#{$_suffix} {
+    padding-bottom: $_value !important;
+  }
+
+  .pad-#{$multiplier}-tb#{$_suffix} {
+    padding-top: $_value !important;
+    padding-bottom: $_value !important;
+  }
+
+  .margin-#{$multiplier}-t#{$_suffix} {
+    margin-top: $_value !important;
+  }
+
+  .margin-#{$multiplier}-b#{$_suffix} {
+    margin-bottom: $_value !important;
+  }
+
+  .margin-#{$multiplier}-tb#{$_suffix} {
+    margin-top: $_value !important;
+    margin-bottom: $_value !important;
+  }
+}

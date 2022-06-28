@@ -1,0 +1,16 @@
+{% extends "./partials/base.njk" %}
+
+{%- block before_main %}
+{% include './partials/header.njk' %}
+{% endblock %}
+
+{%- block main %}
+{% include './partials/main-00-category-nav.njk' %}
+
+{% include './partials/main-02-card-comparison.njk' %}
+
+{% endblock %}
+
+{%- block after_main %}
+{% include './partials/footer.njk' %}
+{% endblock %}

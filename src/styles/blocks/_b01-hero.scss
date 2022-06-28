@@ -1,0 +1,7 @@
+.block--hero__main .hero {
+  min-height: 0;
+}
+
+.block--hero__main:not(:only-child) {
+  padding-bottom: 50px;
+}

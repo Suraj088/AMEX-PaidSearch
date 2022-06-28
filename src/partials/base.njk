@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=1"
+    />
+
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}" />
+    <link rel="preconnect" href="https://www.aexp-static.com" crossorigin />
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script>
+    jQuery(document).ready(function () {
+      const dataContainer = document.getElementById("data-container");
+      const dataContainerInitial = document.getElementById(
+        "data-container-initial"
+      );
+      if (dataContainer || dataContainerInitial) {
+        while (dataContainerInitial.hasChildNodes()) {
+          dataContainer.appendChild(
+            dataContainerInitial.removeChild(dataContainerInitial.firstChild)
+          );
+        }
+      }
+      jQuery("#card-category-input-1").click(function () {
+        window.location.href = "../low-funnel-best.html";
+      });
+      jQuery("#card-category-input-2").click(function () {
+        window.location.href = "../low-funnel-cash-back.html";
+      });
+      jQuery("#card-category-input-3").click(function () {
+        window.location.href = "../low-funnel-rewards.html";
+      });
+      jQuery("#card-category-input-4").click(function () {
+        window.location.href = "../low-funnel-travel.html";
+      });
+      jQuery("#card-category-input-5").click(function () {
+        window.location.href = "../low-funnel-no-fee.html";
+      });
+       jQuery("#card-category-input-6").click(function () {
+        window.location.href = "../low-funnel-view.html";
+      });
+    });
+    </script>
+
+    {%- if constants.DENTSU_IS_DEMO %}
+    <!-- Commented out only on Dentsu demo pages -->
+    <!--
+    <script type="text/javascript" src="//s.ntv.io/js/ntv-amex-companions.min.js" async></script>
+    <script type="text/javascript" src="//s.ntv.io/serve/load.js" async></script>
+     -->
+    {%- else -%}
+    {# <script type="text/javascript" src="//s.ntv.io/js/ntv-amex-companions.min.js" async></script>
+    <script type="text/javascript" src="//s.ntv.io/serve/load.js" async></script> #}
+    {% endif -%}
+
+    <link rel="stylesheet" href="{{ constants.AXP_STATIC_DLS_DIST }}/6.18.4/styles/dls.min.css" />
+  </head>
+  <body>
+    {%- block before_main %}{% endblock %}
+
+    <main>{%- block main %}{% endblock %}</main>
+
+    {%- block after_main %}{% endblock %}
+
+    <script
+      type="text/javascript"
+      src="{{ constants.AXP_STATIC_DLS_DIST }}/6.18.4/scripts/dls.min.js"
+    ></script>
+  </body>
+</html>

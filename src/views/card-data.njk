@@ -1,0 +1,98 @@
+{% extends "./partials/base.njk" %}
+
+{%- block main %}
+
+<div class="container margin-4-tb text-align-center">
+  <h1 class="heading-4 dls-deep-blue margin-3-tb">
+    <span class="dls-logo-line-lg">
+      <img src="{{ constants.AXP_STATIC_ASSETS_DIST }}/img/logos/dls-logo-line.svg" alt="American Express" />
+    </span>
+    <div class="margin-1-t">Paid Search Card Data</div>
+  </h1>
+  <div class="row flex-justify-center text-align-left">
+    <div class="col col-xs-12 col-md-10 col-lg-8 col-xl-6">
+      <p>
+        Explore the accordions at the bottom of this page to get data that corresponds to each category and card shown on Paid&nbsp;Search. Additionally, for convenience, a pure JSON endpoint is available containing all data: <a href="card-data.json">see data as pure JSON</a>.
+      </p>
+      <p class="margin-2-t">
+        Additionally, each staged paid search page contains initial data for the category shown within a <code>div#data-container-initial</code> container. If desired, loading those data the nodes can be achieved by moving them to the <code>div#data-container</code> container that's available on the page. For example:
+<pre class="border margin-2-t pad-2 dls-gray-01-bg" style="font-size: 0.8rem;">
+const dataContainer =
+  document.getElementById('data-container');
+const dataContainerInitial =
+  document.getElementById('data-container-initial');
+
+if (dataContainer || dataContainerInitial) {
+  while (dataContainerInitial.hasChildNodes()) {
+    dataContainer.appendChild(
+      dataContainerInitial.removeChild(
+        dataContainerInitial.firstChild
+      )
+    );
+  }
+}
+</pre>
+      </p>
+      <p class="margin-2-t">
+        Finally, on the paid search pages, a <code>"card-category-change"</code> custom event will be emitted as a prompt to take action and change card data&nbsp;accordingly.
+<pre class="border margin-2-t pad-2 dls-gray-01-bg" style="font-size: 0.8rem;">
+document.body.addEventListener(
+  'card-category-change',
+  (e) => {
+    // `value` is the newly emitted category name
+    console.log(e.detail.value);
+  }
+);
+</pre>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row flex-justify-center">
+    <div class="col col-xs-12 col-md-11 col-lg-10 col-xl-8">
+      <div class="border bordered dls-white-bg">
+
+        {% for category in cardCategories %}
+        <h2 class="body-1">
+          <button
+            id="card-category-data-accordion-{{ category.key}}"
+            data-toggle="accordion"
+            aria-expanded="false"
+            class="collapsible icon-hover"
+          >
+            <span class="collapsible-caret"></span>
+            <span class="{{ category.iconClass }} icon icon-sm margin-1-r"></span>
+            <span>{{ category.label }} ( <code>{{ category.key }}</code> )</span>
+          </button>
+          <div
+            aria-labelledby="card-category-data-accordion-{{ category.key}}"
+            class="accordion-content border-t display-none"
+          >
+            <div class="row pad stack-md-down">
+              <div class="col-xs-12">
+                {%- for card in category.cards %}
+                <h3 class="heading-3 margin-1-b">
+                  {{ card.name | safe }} ( <code>{{ card.id }}</code> )
+                </h3>
+                <textarea
+                  readonly
+                  rows="5"
+                  onclick="this.focus();this.select()"
+                  class="form-control margin-4-b pad-0-tb"
+                  style="font-family: monospace; resize: none"
+                >{{ card | dump | safe }}</textarea>
+                {%- endfor %}
+              </div>
+            </div>
+          </div>
+        </h2>
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+.block--terms-and-conditions ol {
+  list-style: none;
+  counter-reset: item;
+  padding: 0;
+}
+
+.block--terms-and-conditions li:not([data-no-bullet])::before {
+  content: counter(item) '. ' attr(aria-label);
+  font-weight: 600;
+}
+
+.block--terms-and-conditions li:not([data-li-bullet]) {
+  counter-increment: item;
+}
+
+.block--terms-and-conditions .toggle-link.toggle-link-icon {
+  text-decoration: none;
+}
+
+.block--terms-and-conditions .toggle-link.toggle-link-icon[aria-expanded='true'] {
+  .show {
+    display: none;
+  }
+  .hide {
+    display: inline-block;
+  }
+}
+
+.block--terms-and-conditions .toggle-link.toggle-link-icon[aria-expanded='false'] {
+  .show {
+    display: inline-block;
+  }
+  .hide {
+    display: none;
+  }
+}

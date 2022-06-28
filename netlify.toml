@@ -1,0 +1,13 @@
+[build]
+  base = ""
+  publish = "dist/"
+  command = "npm run build"
+
+# Production context
+[context.production]
+  # No-op. Inherit from defaults.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"

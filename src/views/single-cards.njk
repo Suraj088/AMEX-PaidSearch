@@ -1,0 +1,43 @@
+{% extends "./partials/base.njk" %}
+
+{%- block main %}
+{%-
+  set singleViews = [
+    "amazon-business-card",
+    "amazon-business-prime-card",
+    "blue-business-cash-card",
+    "blue-business-plus-credit-card",
+    "business-gold-card",
+    "business-green-rewards-card",
+    "business-platinum-card",
+    "delta-sky-miles-gold-business-card",
+    "delta-sky-miles-platinum-business-card",
+    "delta-sky-miles-reserve-business-card",
+    "hilton-honors-business-card",
+    "lowes-business-rewards-card",
+    "marriott-bonvoy-business-card",
+    "plum-card"
+  ]
+%}
+<div class="container margin-4-tb text-align-center">
+  <h1 class="heading-6 dls-deep-blue margin-3-tb">
+    <span class="dls-logo-line-lg">
+      <img src="{{ constants.AXP_STATIC_ASSETS_DIST }}/img/logos/dls-logo-line.svg" alt="American Express" />
+    </span>
+    <div class="margin-1-t">Paid Search</div>
+  </h1>
+  <div class="row flex-justify-center flex-wrap margin-2-tb">
+    {% for singleView in singleViews %}
+    <div class="col col-xs-12 col-sm-10 col-md-7 col-lg-5 col-xl-4 pad-1 stack">
+      <a
+        class="fluid btn btn-secondary flex-inline flex-align-items-stretch flex-justify-center"
+        href="single--{{singleView}}.html"
+      >
+        <span class="margin-1-r icon icon-sm dls-icon-card"></span>
+        <span>{{ singleView | replace('-', ' ') | title }}</span>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

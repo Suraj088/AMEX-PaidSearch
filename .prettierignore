@@ -1,0 +1,3 @@
+src/views/*.njk
+src/vendor/
+dist/

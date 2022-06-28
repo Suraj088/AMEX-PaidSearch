@@ -1,0 +1,13 @@
+.block--card-membership {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: 768px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.block--card-membership--item p + p {
+  margin-top: 1em;
+}
