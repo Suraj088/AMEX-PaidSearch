@@ -93,23 +93,23 @@ export function CardCompareTable(): JSX.Element | null {
   const [num,setNum]=useState([])
   
   
-if(num.length){
-    console.log('1',num)
-  var viewActiveItem = useMemo(
-    (): CardDynamicData | null => num[activeItemIndex] || null,
-    [num, activeItemIndex]
-  );
-}else{
-  console.log('2')
-  var viewActiveItem = useMemo(
-    (): CardDynamicData | null => itemState.state.allItems[activeItemIndex] || null,
-    [itemState.state.allItems, activeItemIndex]
-  );
-}
+// if(num.length){
+//     console.log('1',num)
+//   var viewActiveItem = useMemo(
+//     (): CardDynamicData | null => num[activeItemIndex] || null,
+//     [num, activeItemIndex]
+//   );
+// }else{
+//   console.log('2')
+//   var viewActiveItem = useMemo(
+//     (): CardDynamicData | null => itemState.state.allItems[activeItemIndex] || null,
+//     [itemState.state.allItems, activeItemIndex]
+//   );
+// }
 
  
   const titleId = `card-title=${activeItem?.id}`;
-  const viewTitleId=`card-title=${viewActiveItem?.id}`
+  // const viewTitleId=`card-title=${viewActiveItem?.id}`
   
   useEffect(() => {
     setActiveItemIndex(0);
@@ -117,9 +117,9 @@ if(num.length){
 
   
 
-  useEffect(() => {
-    setActiveItemIndex(0);
-  }, [num]);
+  // useEffect(() => {
+  //   setActiveItemIndex(0);
+  // }, [num]);
  
 
   const handlers = useSwipeable({
@@ -128,8 +128,8 @@ if(num.length){
     preventDefaultTouchmoveEvent: true,
   });
   
-  console.log(viewActiveItem,'hello')
-  if ( !viewActiveItem || itemState.state.allItems.length === 0 ) {
+  
+  if (  itemState.state.allItems.length === 0 ) {
     return (
       <div className="flex flex-align-center flex-justify-center margin-5-tb">
         <div
@@ -151,109 +151,24 @@ if(num.length){
     <div className="card-compare-table body-3" {...handlers}>
       {path  ? (
       <div>
-       <FullBleedContainerFluid
-        key={viewActiveItem.id}>
-        <div
-          className="card-compare-header-row dls-gray-06 dls-gray-01-bg"
-          style={`background-color: ${viewActiveItem.quickCompareColor} !important;`}
+      
+      <CardFilterSection
+          className=""
+          sectionTitle={<h4 class="heading-5 font-weight-bold"> All Business Cards from American Express</h4>}
+          //sectionTitleExtraClasses="flex-align-self-center "
+          itemState={itemState}
+          setActiveItemIndex={ setActiveItemIndex}
+          columnClass ={columnClass} 
+          activeItemIndex={activeItemIndex}
+         setNum={setNum}
+         num={num}
+          
         >
-          <button className='close-button'>X</button>
-          <div className="container-fluid container-fluid-capped">
-            <div className="row">
-            <div className="col col-xs-3 hidden-sm-down pad-3-tb text-align-center flex-align-self-center">
-                <a
-                  href={viewActiveItem.pdpUrl}
-                  key={viewActiveItem.id}
-                  data-content-id="card-header"
-                  data-card-id={viewActiveItem.id}
-                  className={cx('text-align-center display-block dls-gray-06')}
-                  target="_blank"
-                >
-                  <img
-                    className="card-compare-card-image"
-                    src={viewActiveItem.image}
-                    alt=""
-                    aria-labelledby={viewTitleId}
-                  />
-                  <RawHtml
-                    id={viewTitleId}
-                    className="heading-4 font-weight-bold margin-2-t"
-                    tagName="h3"
-                    html={viewActiveItem.name}
-                  />
-                </a>
-                <div
-                  key={viewActiveItem.id}
-                  data-content-id="card-header-extra"
-                  data-card-id={viewActiveItem.id}
-                  className={cx('text-align-center legal-1')}
-                >
-                  <p class="body-3 margin-1-tb">
-                    <strong>${viewActiveItem.annualFee}</strong> Annual Fee
-                    {typeof viewActiveItem.annualFeeSymbols === 'string' &&
-                    viewActiveItem.annualFeeSymbols.length > 0 ? (
-                      <sup>{viewActiveItem.annualFeeSymbols}</sup>
-                    ) : null}
-                  </p>
-                  {viewActiveItem.annualFeeSubtext && (
-                    <RawHtml tagName="p" html={viewActiveItem.annualFeeSubtext} />
-                  )}
-                  <p class="margin-1-t">
-                    <a class="btn btn-sm" href={viewActiveItem.applyUrl || viewActiveItem.url}>
-                      Apply Now
-                    </a>
-                  </p>
-                  <p class="legal-1 margin-1-t">
-                    <a
-                      href={viewActiveItem.offerAndBenefitTermsUrl}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      <sup>♦︎</sup>
-                      <sup>‡</sup>
-                      <sup>†</sup>Offer &amp; Benefit Terms
-                    </a>
-                    &ensp;|&ensp;
-                    <a href={viewActiveItem.ratesAndFeesUrl} target="_blank" rel="noreferrer noopener">
-                      <sup>¤</sup>Rates &amp; Fees
-                    </a>
-                  </p>
-                </div>
-              </div>
-               <div className="col col-xs-12 col-md-6 pad-3-tb card-compare-content-node-container">
-                <div
-                  key={viewActiveItem.id}
-                  data-content-id="welcome-offer"
-                  data-card-id={viewActiveItem.id}
-                  className={cx('pad-2-lr')}
-                >
-                  {viewActiveItem.quickCompare.map((i, idx) => (
-                    <CardCompareContentNode key={`${idx}`} node={i} />
-                  ))}
-                </div>
-              </div>
-               
-            </div>
-          </div>
-        </div>
-        </FullBleedContainerFluid> 
-        <CardFilterSection
-            className=""
-            sectionTitle={<p class="heading-4 font-weight-bold"> All Business Cards from American Express</p>}
-            sectionTitleExtraClasses="flex-align-self-center "
-            viewActiveItem={viewActiveItem}
-            itemState={itemState}
-            setActiveItemIndex={ setActiveItemIndex}
-            columnClass ={columnClass} 
-           setNum={setNum}
-           num={num}
-            
-          >
 
-            
-        </CardFilterSection>
-        
-      </div>
+          
+      </CardFilterSection>
+      
+    </div>
           
       ):(activeItem?
        <div>

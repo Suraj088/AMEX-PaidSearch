@@ -370,3 +370,20 @@
           ))}
         </div>
       </CardHeaderSection>
+
+
+
+
+
+      1 Reward:[BBPC,BGC,AEBGC,BPC]
+      2 No fee:[BBCC,BBPC,DSGBC]
+      3 CashBack:[BBCC,LBRC,TPC]
+      4 Airline:[BGC,BPC]
+
+store=[BBPC,BGC,AEBGC,BPC,BBCC,BBPC,DSGBC,BBCC,LBRC,TPC,BGC,BPC]=12
+common=[BBPC,BBCC,BPC,BGC]
+
+
+
+
+

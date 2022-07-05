@@ -15,8 +15,11 @@ module.exports = () => {
     applyUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/business-platinum-charge-card/30214-9-0?intlink=US-Acq-NonBrandSearch-PlatinumCard-Apply-Platinum`,
     image: `assets/card-art-business-platinum-1624478767.png`,
     annualFee: 695,
+    NoAnnualFee:false,
     membershipRewards:true,
-    dining:true,
+    CashBack:false,
+    Airline:true,
+    Hotel:false,
     annualFeeSymbols: '¤',
     annualFeeSubtext:
       '',

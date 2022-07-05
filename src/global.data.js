@@ -138,6 +138,7 @@ module.exports = async () => {
           importFresh('./card-data/amazon-business-card.data.js')(),
           importFresh('./card-data/amazon-business-prime-card.data.js')(),
           importFresh('./card-data/blue-business-cash-card.data.js')(),
+          importFresh('./card-data/blue-business-plus-credit-card.data.js')(),
           importFresh('./card-data/business-gold-card.data.js')(),
           importFresh('./card-data/business-green-rewards-card.data.js')(),
           importFresh('./card-data/business-platinum-card.data.js')(),

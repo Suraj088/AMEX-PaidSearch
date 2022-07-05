@@ -7,7 +7,7 @@
 @use './styles/blocks/b04-card-sticky-nav';
 @use './styles/blocks/card-comparison';
 @use './styles/blocks/terms-and-conditions';
-
+@use './styles/blocks/_vcp';
 .visually-hidden {
   @include a11y.visually-hidden();
 }

@@ -21,9 +21,11 @@ export interface CardDynamicData {
   applyUrl: string | null;
   image: string;
   annualFee: number | string;
-  NoAnnualFee:boolean,
+  NoAnnualFee:boolean;
   membershipRewards:boolean;
-  dining:boolean;
+  CashBack:boolean;
+  Airline:boolean;
+  Hotel:boolean;
   annualFeeSymbols: string | null;
   annualFeeSubtext?: string;
   offerAndBenefitTermsUrl: string;
