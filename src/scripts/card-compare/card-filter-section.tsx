@@ -38,7 +38,7 @@ export const CardFilterSection: FunctionComponent<CardSectionProps> = ({
 }) => {
   const allCards=itemState.state.allItems    //all cards
   const [data, setData] = useState([...allCards]);
-  // const [flag, setFlag] = useState([...itemState.state.allItems]);
+  const [flag, setFlag] = useState(false);
   const [count, setCount] = useState(-1); //to keep count of click and unclkick
   const [store,setStore]=useState([0])    //to keep all data
   const[toggle,setToggle]=useState('')    // to keep 
@@ -47,36 +47,26 @@ export const CardFilterSection: FunctionComponent<CardSectionProps> = ({
 
  var viewActiveItem = useMemo(
     (): CardDynamicData  => data[activeItemIndex] || null,
-    [ activeItemIndex]
+    [ activeItemIndex,count]
   );
  
   
-  const viewTitleId=`card-title=${data[activeItemIndex] ?.id}`
-  console.log(viewActiveItem,'active')
-  
-
-useEffect(()=>{
-  document.getElementById('pop-up')?.classList.add('visibility')
-  
-},[])
-
-
-
+const viewTitleId=`card-title=${data[activeItemIndex] ?.id}`
 console.log(data[activeItemIndex],activeItemIndex,'1')
 
 
-  if ( !viewActiveItem || allCards === 0 ) {
-    return (
-      <div className="flex flex-align-center flex-justify-center margin-5-tb">
-        <div
-          role="progressbar"
-          aria-valuemin="0"
-          aria-valuemax="100"
-          class="progress-circle progress-indeterminate progress-lg margin-5-tb"
-        ></div>
-      </div>
-    );
-  }
+  // if ( !viewActiveItem  ) {
+  //   return (
+  //     <div className="flex flex-align-center flex-justify-center margin-5-tb">
+  //       {/* <div
+  //         role="progressbar"
+  //         aria-valuemin="0"
+  //         aria-valuemax="100"
+  //         class="progress-circle progress-indeterminate progress-lg margin-5-tb"
+  //       ></div> */}
+  //     </div>
+  //   );
+  // }
 
 
   // var viewActiveItem:any = useMemo(
@@ -106,9 +96,14 @@ console.log(data[activeItemIndex],activeItemIndex,'1')
   //   setItem(result)
   // }
 
+  
+
   const handleClick = (e: any) => {
+    setFlag(false)
+    setActiveItemIndex(0)
     filterData(e.target.value, e.target.checked);
-    document.getElementById('pop-up')?.classList.add('visibility')
+    removeClass()
+    
     
   };
 
@@ -138,6 +133,26 @@ console.log(data[activeItemIndex],activeItemIndex,'1')
 
   //   displayData(filteredData, checked, dupeArr);
   // };
+
+  
+  // function displayData(filteredData: any, checked: boolean, dupeArr: any) {
+  //   if (data.length == 14) setData(() => filteredData);
+  //   else if (checked) {
+  //     console.log(data, filteredData);
+  //     setFlag(() => [...data, ...filteredData]);
+  //     console.log(flag, 'flag');
+  //     setData(() => {
+  //       let set = new Set([...data, ...filteredData]);
+  //       return [...set];
+  //     });
+  //   } else if (count == 1) setData(() => itemState.state.allItems);
+  //   else {
+  //     setData(() => {
+  //       let set = new Set([...dupeArr, ...filteredData]);
+  //       return [...set];
+  //     });
+  //   }
+  // }
 
   const filterData = (value: string, checked: boolean) => {
     let filteredData: any;
@@ -190,24 +205,6 @@ console.log(data[activeItemIndex],activeItemIndex,'1')
     displayData(filteredData, checked,cardId);
   };
 
-  // function displayData(filteredData: any, checked: boolean, dupeArr: any) {
-  //   if (data.length == 14) setData(() => filteredData);
-  //   else if (checked) {
-  //     console.log(data, filteredData);
-  //     setFlag(() => [...data, ...filteredData]);
-  //     console.log(flag, 'flag');
-  //     setData(() => {
-  //       let set = new Set([...data, ...filteredData]);
-  //       return [...set];
-  //     });
-  //   } else if (count == 1) setData(() => itemState.state.allItems);
-  //   else {
-  //     setData(() => {
-  //       let set = new Set([...dupeArr, ...filteredData]);
-  //       return [...set];
-  //     });
-  //   }
-  // }
 
   function displayData(filteredData: any, checked: boolean,cardId:any) {
     let common:any
@@ -241,18 +238,28 @@ console.log(data[activeItemIndex],activeItemIndex,'1')
   }
 
   function setindex(idx: number,item:any) {
-    setActiveItemIndex(idx)
+    setFlag(true)
+    setActiveItemIndex(()=>idx)
+
+    console.log(viewActiveItem.id,'active id')
     console.log(activeItemIndex,data[idx].id,'index',idx)
     setToggle(()=>data[idx].id)
     addClass(idx)
-    removeClass()
+
+    if(toggle!=data[idx].id)
+          removeClass()
+
+ 
         
+  }
+
+  function Close(){
+    setFlag(false)
+    removeClass()
   }
 
   function addClass(idx:number){
     document.querySelector(`[data-card-id=${data[idx].id}][data-content-id="card-selection"]`)?.classList.add('visibility')
-    document.getElementById('pop-up')?.classList.remove('visibility')
-    
   }
 
   function removeClass(){
@@ -335,7 +342,7 @@ console.log(data[activeItemIndex],activeItemIndex,'1')
         </div>
         
         <div class="col col-xs-12 col-md-9">
-      
+     {flag?
         <FullBleedContainerFluid
         key={viewActiveItem.id}>
         <div
@@ -343,7 +350,7 @@ console.log(data[activeItemIndex],activeItemIndex,'1')
           style={`background-color: ${viewActiveItem.quickCompareColor} !important;`}
           id="pop-up"
         >
-          <button className='close-button'>X</button>
+          <button className='close-button'onClick={()=>Close()}>X</button>
           <div className="container-fluid container-fluid-capped">
             <div className="row">
             <div className="col col-xs-4 hidden-sm-down pad-3-tb text-align-center ">
@@ -422,7 +429,7 @@ console.log(data[activeItemIndex],activeItemIndex,'1')
             </div>
           </div>
         </div>
-        </FullBleedContainerFluid>
+        </FullBleedContainerFluid>:null}
             <div className="row flex-justify-center vcp_item_wrap">
               { data ?
               data.map((item:any, idx:any) => (

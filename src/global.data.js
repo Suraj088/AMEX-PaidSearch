@@ -132,7 +132,7 @@ module.exports = async () => {
       },
       {
         key: 'view',
-        label: 'View',
+        label: 'View All Cards',
         iconClass: 'dls-icon-favorite',
         cards: [
           importFresh('./card-data/amazon-business-card.data.js')(),

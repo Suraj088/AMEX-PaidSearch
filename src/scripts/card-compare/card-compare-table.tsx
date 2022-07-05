@@ -304,6 +304,13 @@ export function CardCompareTable(): JSX.Element | null {
                   Features and Benefits
                 </p>
                 <ul id="option-category-input">
+                <li className="container-option" onClick={() => navigateToUrl("low-funnel-no-fee.html")}>
+                    <label>
+                      <input type="radio" name="card-category-input-selector" id="card-category-input-selector-5"  className="visually-hidden" value="no-fee" />        
+                      <div className="dls-bright-blue icon icon-sm icon-hover dls-icon-no-fee"></div>
+                      <div className="dls-bright-blue margin-1-l option-text">View All Cards</div>
+                    </label>
+                  </li>
                   <li className="container-option" onClick={() => navigateToUrl("best")}>
                     <label>
                       <input type="radio" name="card-category-input-selector" id="card-category-input-selector-1"  className="visually-hidden" value="best" />        
@@ -339,6 +346,7 @@ export function CardCompareTable(): JSX.Element | null {
                       <div className="dls-bright-blue margin-1-l option-text">No Fee</div>
                     </label>
                   </li>
+                  
                   <span className='arrowDropdown'></span>
                 </ul>
                 <div className="row">
