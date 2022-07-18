@@ -3,7 +3,7 @@
 /**
  * @returns {import('../scripts/card-compare/use-data-container-items').CardDynamicData}
  */
-module.exports = () => {
+ module.exports = () => {
   const modeBenefitsIdAttr = 'business-platinum-card-more-benefits-status-boost';
   const ratesAndFeesUrl = `https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/business-platinum-charge-card/30214-9-0?key=tncBody&rwdFlag=rwd`;
 
@@ -11,18 +11,19 @@ module.exports = () => {
     id: 'business-platinum-card',
     name: 'Business Platinum&nbsp;Card<sup>®</sup>',
     url: `https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/30214/`,
-    pdpUrl: 'https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/30214/?linknav=US-Acq-GCP-BusinessCards-ViewAllCards-CardArt-Platinum',
+    pdpUrl:
+      'https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/30214/?linknav=US-Acq-GCP-BusinessCards-ViewAllCards-CardArt-Platinum',
     applyUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/business-platinum-charge-card/30214-9-0?intlink=US-Acq-NonBrandSearch-PlatinumCard-Apply-Platinum`,
     image: `assets/card-art-business-platinum-1624478767.png`,
     annualFee: 695,
-    NoAnnualFee:false,
     membershipRewards:true,
-    CashBack:false,
-    Airline:true,
-    Hotel:false,
+    Dining:true,
+    Retail:true,
+    Technology:true,
+    Travel:true,
+    Supplies:true,
     annualFeeSymbols: '¤',
-    annualFeeSubtext:
-      '',
+    annualFeeSubtext: '',
     offerAndBenefitTermsUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/business-platinum-charge-card/30214-9-0?key=tncBody&rwdFlag=rwd#offer-terms`,
     ratesAndFeesUrl,
     quickCompareImage: 'assets/lifestyle-business-platinum-card-1635749061.png',
@@ -241,5 +242,6 @@ module.exports = () => {
         extraClasses: 'legal-1 margin-1-t',
       },
     ],
+    
   };
 };

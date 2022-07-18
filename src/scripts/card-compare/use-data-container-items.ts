@@ -26,6 +26,15 @@ export interface CardDynamicData {
   CashBack:boolean;
   Airline:boolean;
   Hotel:boolean;
+  Dining:boolean;
+  Technology:boolean;
+  Gas:boolean;
+  BusinessServices:boolean;
+  Retail:boolean;
+  Travel:boolean;
+  Supplies:boolean;
+  Advertising:boolean;
+  Shipping:boolean;
   annualFeeSymbols: string | null;
   annualFeeSubtext?: string;
   offerAndBenefitTermsUrl: string;

@@ -3,16 +3,19 @@
 /**
  * @returns {import('../scripts/card-compare/use-data-container-items').CardDynamicData}
  */
-module.exports = () => {
+ module.exports = () => {
   return {
     id: 'hilton-honors-business-card',
     name: 'Hilton Honors American Express Business&nbsp;Card',
     url: `https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/hilton-honors-american-express-business-credit-card-amex/30214/`,
-    pdpUrl: 'https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/hilton-honors-american-express-business-credit-card-amex/30214/?linknav=US-Acq-GCP-BusinessCards-ViewAllCards-CardTitle-Hilton',
+    pdpUrl:
+      'https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/hilton-honors-american-express-business-credit-card-amex/30214/?linknav=US-Acq-GCP-BusinessCards-ViewAllCards-CardTitle-Hilton',
     applyUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/hilton-honors-american-express-business-credit-card/30214-9-0?intlink=US-Acq-NonBrandSearch-HiltonCard-Apply-Hilton`,
     image: `https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/hilton-honors.png`,
     annualFee: 95,
-    membershipReward:false,
+    Hotel:true,
+    BusinessServices:true,
+    Travel:true,
     annualFeeSymbols: '¤',
     offerAndBenefitTermsUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/hilton-honors-american-express-business-credit-card/30214-9-0?key=tncBody&rwdFlag=rwd#offer-terms`,
     ratesAndFeesUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/hilton-honors-american-express-business-credit-card/30214-9-0?key=tncBody&rwdFlag=rwd`,
@@ -27,7 +30,7 @@ module.exports = () => {
       {
         kind: 'p',
         content:
-          'Earn <span class="heading-4 font-weight-bold">130,000</span> Hilton Honors Bonus Points after you spend $3,000 in purchases on the Card in the first 3 months of Card Membership. Plus, you can earn up to $130 in Statement Credits on eligible purchases made on the Card at any of the Hilton family hotels in the first 12 months of Card Membership. Offer ends 7/6/22.<sup>†</sup>',
+          'Earn <span class="heading-4 font-weight-bold">130,000</span> Hilton Honors Bonus Points after you spend $3,000 in purchases on the Hilton Honors Business Card in the first 3 months of Card Membership.<sup>†</sup>',
       },
       {
         kind: 'heading-4',
@@ -61,11 +64,13 @@ module.exports = () => {
     welcomeOffer: [
       {
         kind: 'heading-4',
-        content: `Earn <span class="display-block heading-5 font-weight-bold margin-0">130,000</span> Hilton Honors Bonus Points`,
+        content:
+          'Earn <span class="display-block heading-5 font-weight-bold margin-0">130,000</span> Hilton Honors Bonus Points',
       },
       {
         kind: 'p',
-        content: `after you spend $3,000 in purchases on the Card in the first 3 months of Card Membership. Plus, you can earn up to $130 in Statement Credits on eligible purchases made on the Card at any of the Hilton family hotels in the first 12 months of Card Membership. Offer ends 7/6/22.<sup>†</sup>`,
+        content:
+          'after you spend $3,000 in purchases on the Hilton Honors Business Card in the first 3 months of Card Membership.<sup>†</sup>',
       },
     ],
     earningRewards: [
@@ -126,7 +131,7 @@ module.exports = () => {
       },
       {
         kind: 'p',
-        content: `With your Hilton Honors American Express Business Card, you can enroll in Priority PassTM Select, with access to over 1,200 airport lounges in over 130 countries, regardless of which carrier or class you are flying. This allows you to relax before or in between flights. You can enjoy snacks, drinks and internet access in a quiet, comfortable location. Get 10 complimentary lounge visits each Priority Pass Membership year. `,
+        content: `With your Hilton Honors American Express Business Card, you can enroll in Priority Pass Select, with access to over 1,200 airport lounges in over 130 countries, regardless of which carrier or class you are flying. This allows you to relax before or in between flights. You can enjoy snacks, drinks and internet access in a quiet, comfortable location. Get 10 complimentary lounge visits each Priority Pass Membership year. `,
       },
       {
         kind: 'heading-3',
@@ -137,5 +142,6 @@ module.exports = () => {
         content: `Spend $40,000 on eligible purchases on your Card in a calendar year and you can earn Hilton Honors Diamond status through the end of the next calendar year.<sup>‡</sup>`,
       },
     ],
+   
   };
 };
