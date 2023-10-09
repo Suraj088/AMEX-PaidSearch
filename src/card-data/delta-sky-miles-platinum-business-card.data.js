@@ -10,12 +10,13 @@ module.exports = () => {
   return {
     id: 'delta-sky-miles-platinum-business-card',
     name:
-      'Delta&nbsp;SkyMiles<sup>®</sup>&nbsp;Platinum Business American Express Card<sup>®</sup>',
+      'Delta&nbsp;SkyMiles<sup>®</sup>&nbsp;Platinum Business Card​',
     url: `https://www.americanexpress.com/en-us/business/credit-cards/delta-skymiles-platinum/30214/`,
     pdpUrl: 'https://www.americanexpress.com/en-us/business/credit-cards/delta-skymiles-platinum/30214/?linknav=US-Acq-GCP-BusinessCards-ViewAllCards-CardTitle-DeltaPlatinum',
     applyUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/delta-skymiles-platinum/30214-9-0?intlink=US-Acq-NonBrandSearch-DeltaPlatinumCard-Apply-DeltaPlatinum`,
     image: `https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/platinum-delta-skymiles-business.png`,
     annualFee: 250,
+    aprText:' ',
     Airline:true,
     BusinessServices:true,
     Retail:true,
@@ -25,7 +26,7 @@ module.exports = () => {
     ratesAndFeesUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/delta-skymiles-platinum/30214-9-0?key=tncBody&rwdFlag=rwd`,
     quickCompareImage: 'assets/lifestyle-delta-sky-miles-platinum-business-card-1635749061.png',
     quickCompareColor: '#E7EDF2',
-    quickCompare: [
+    vacPopOut: [
       {
         kind: 'heading-5',
         content: 'Fly in style and let your business&nbsp;soar',
@@ -34,7 +35,7 @@ module.exports = () => {
       {
         kind: 'p',
         content:
-          'Earn <span class="heading-4 font-weight-bold">100,000</span> bonus miles after spending $4,000 in purchases on your new Card in your first 3 months of Card Membership. Offer expires 8/3/22.<sup>†</sup>',
+          'Earn <span class="heading-4 font-weight-bold">60,000</span> Bonus Miles after you spend $3,000 in purchases on your new Card in your first 3 months of Card Membership.<sup>†</sup>',
       },
       {
         kind: 'heading-4',
@@ -44,8 +45,35 @@ module.exports = () => {
       {
         kind: 'ul',
         content: [
-          '<strong>3X Miles</strong> on purchases made directly at hotels & eligible Delta purchases<sup>‡</sup>',
-          '<strong>1.5X Miles</strong> per dollar on single eligible purchases of $5,000 or more (that’s an extra half mile per dollar), up to 50,000 additional miles per year. If your purchase qualifies for a category that has a higher mileage accelerator, only the higher accelerator will apply<sup>‡</sup>',
+          'Now take 15% off Award Travel on Delta flights. Anytime.<sup>[1]‡</sup><br><p class="legal-1">[1] Not applicable to partner-operated flights or to taxes and fees.</p>',
+          '<strong>3X Miles</strong> on purchases made directly with hotels<sup>‡</sup> & eligible Delta purchases<sup>‡</sup>',
+          '<strong>1.5X Miles</strong> per dollar on single eligible purchases of $5,000 or more (that’s an extra half mile per dollar), up to 50,000 additional miles per calendar year. If your purchase qualifies for a category that has a higher mileage accelerator, only the higher accelerator will apply<sup>‡</sup>',
+          `Get closer to Medallion<sup>®</sup> Status with Status Boost<sup>®</sup>.<sup>‡</sup> <a href="https://www.americanexpress.com/en-us/business/credit-cards/campaign/travel/#delta-sky-miles-platinum-business-card-more-benefits-status-boost" rel="noopener noreferrer">Here&apos;s how</a>.`,
+        ],
+      },
+    ],
+    quickCompare: [
+      {
+        kind: 'heading-5',
+        content: 'Fly in style and let your business&nbsp;soar',
+        extraClasses: 'font-weight-bold',
+      },
+      {
+        kind: 'p',
+        content:
+          'Earn <span class="heading-4 font-weight-bold">60,000</span> Bonus Miles after you spend $3,000 in purchases on your new Card in your first 3 months of Card Membership.<sup>†</sup>',
+      },
+      {
+        kind: 'heading-4',
+        content: 'Great For:',
+        extraClasses: 'font-weight-bold',
+      },
+      {
+        kind: 'ul',
+        content: [
+          'Now take 15% off Award Travel on Delta flights. Anytime.<sup>[1]‡</sup><br><p class="legal-1">[1] Not applicable to partner-operated flights or to taxes and fees.</p>',
+          '<strong>3X Miles</strong> on purchases made directly with hotels<sup>‡</sup> & eligible Delta purchases<sup>‡</sup>',
+          '<strong>1.5X Miles</strong> per dollar on single eligible purchases of $5,000 or more (that’s an extra half mile per dollar), up to 50,000 additional miles per calendar year. If your purchase qualifies for a category that has a higher mileage accelerator, only the higher accelerator will apply<sup>‡</sup>',
           `Get closer to Medallion<sup>®</sup> Status with Status Boost<sup>®</sup>.<sup>‡</sup> <a href="#${statusBoostBenefitIdAttr}" rel="noopener noreferrer">Here&apos;s how</a>.`,
         ],
       },
@@ -54,7 +82,7 @@ module.exports = () => {
     greatFor: [
       {
         iconKey: 'hotel',
-        label: `<strong>3X</strong> Miles on purchases made directly at hotels & eligible Delta purchases<sup>‡</sup>`,
+        label: `<strong>3X</strong> Miles on purchases made directly with hotels<sup>‡</sup> & eligible Delta purchases<sup>‡</sup>`,
       },
       {
         iconKey: 'receipt',
@@ -68,17 +96,17 @@ module.exports = () => {
     welcomeOffer: [
       {
         kind: 'heading-4',
-        content: `Earn <span class="display-block heading-5 font-weight-bold margin-0">100,000</span> bonus miles`,
+        content: `Earn <span class="display-block heading-5 font-weight-bold margin-0">60,000</span> Bonus Miles`,
       },
       {
         kind: 'p',
-        content: `after spending $4,000 in purchases on your new Card in your first 3 months of Card Membership. Offer expires 8/3/22.<sup>†</sup><sup>†</sup>`,
+        content: `after you spend $3,000 in purchases on your new Card in your first 3 months of Card Membership.<sup>†</sup>`,
       },
     ],
     earningRewards: [
       {
         kind: 'img',
-        content: `assets/great-for-delta-sky-miles-platinum-business-card-1635749061.jpg`,
+        content: `assets/platinum-earning-rewards.png`,
         extraClasses: 'border-radius-1',
       },
       {
@@ -93,12 +121,12 @@ module.exports = () => {
         kind: 'ul',
         content: [
           `on eligible purchases made directly with Delta<sup>‡</sup>`,
-          `purchases made directly at hotels<sup>‡</sup>`,
+          `purchases made directly with hotels<sup>‡</sup>`,
         ],
       },
       {
         kind: 'p',
-        content: `<strong>1.5X Miles</strong> per dollar on single eligible purchases of $5,000 or more (that’s an extra half mile per dollar), up to 50,000 additional miles per year. If your purchase qualifies for a category that has a higher mileage accelerator, only the higher accelerator will apply<sup>‡</sup>`,
+        content: `<strong>1.5X Miles</strong> per dollar on single eligible purchases of $5,000 or more (that’s an extra half mile per dollar), up to 50,000 additional miles per calendar year. If your purchase qualifies for a category that has a higher mileage accelerator, only the higher accelerator will apply (ex. you would earn 3X miles on purchases made directly with Delta and Hotel instead of 1.5X).<sup>‡</sup>`,
       },
       {
         kind: 'p',
@@ -108,12 +136,28 @@ module.exports = () => {
     moreBenefits: [
       {
         kind: 'heading-3',
+        content: `New Benefit: Take Off with 15% Off Award Travel. Anytime<sup>‡</sup>`,
+      },
+      {
+        kind: 'p',
+        content: `Take 15% off when booking Award Travel with miles.<sup>[1]</sup> Here's how:<br>
+        1. Visit delta.com or the Fly Delta app and log in to your Delta SkyMiles account<br>
+        2. Choose “Shop with Miles” when searching for Delta flights for your itinerary<br>
+        3. The 15% miles discount will automatically be reflected.<sup>‡</sup>`,
+      },
+      {
+        kind: 'p',
+        content: `[1] Discount not applicable to partner-operated flights or to taxes and fees.`,
+        extraClasses: 'legal-1',
+      },
+      {
+        kind: 'heading-3',
         id: statusBoostBenefitIdAttr,
         content: `Status Boost<sup>®</sup>: Get Closer to Medallion<sup>®</sup> Status`,
       },
       {
         kind: 'p',
-        content: `Earn 10,000 Medallion<sup>®</sup> Qualification Miles (MQMs) after you spend $25,000 in purchases on your Card in a calendar year. Earn an additional 10,000 MQMs after you spend an additional $25,000 in purchases.<sup>‡</sup>`,
+        content: `Earn 10,000 Medallion<sup>®</sup> Qualification Miles (MQMs) after you spend $25,000 in purchases on your Card up to 2 times in a calendar year. Earn an additional 10,000 MQMs after you spend an additional $25,000 in purchases.<sup>‡</sup>`,
       },
       {
         kind: 'p',
@@ -125,7 +169,7 @@ module.exports = () => {
       },
       {
         kind: 'p',
-        content: `As a benefit of Card Membership, you can check your first bag free on Delta flights booked with your Card. You can save up to $60 on a round-trip Delta flight per person. For a family of four that’s a potential savings of up to $240 per round-trip flight.<sup>‡</sup>`,
+        content: `As a benefit of Card Membership, you can check your first bag free on Delta flights. You can save up to $60 on a round-trip Delta flight per person. For a family of four that’s a potential savings of up to $240 per round-trip flight.<sup>‡</sup>`,
       },
       {
         kind: 'heading-3',
@@ -142,11 +186,11 @@ module.exports = () => {
       },
       {
         kind: 'heading-3',
-        content: `$39 Sky Club Access`,
+        content: `Delta Sky Club® Access`,
       },
       {
         kind: 'p',
-        content: `Delta Sky Club<sup>®</sup> Access – enjoy an exclusive rate of $39 per person per visit to enter the Delta Sky Club for you and up to two guests when traveling on a Delta flight.<sup>‡</sup>`,
+        content: `You and up to two guests can enjoy snacks and beverages, Wi-Fi access, satellite TV, newspapers and magazines, personalized flight assistance, private restrooms and more at Delta Sky Club<sup>®</sup> for a per-visit rate of $50 per person.<sup>‡</sup>`,
       },
     ],
   };

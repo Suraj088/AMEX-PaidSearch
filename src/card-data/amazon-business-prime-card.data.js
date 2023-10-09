@@ -12,6 +12,7 @@ module.exports = () => {
     pdpUrl:`https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/amazon-business-prime-card/`,
     image: `https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/amazon-business-prime-angled.png`,
     annualFee: 0,
+    aprText:' ',
     NoAnnualFee:true,
     Retail:true,
     Supplies:true,
@@ -19,7 +20,56 @@ module.exports = () => {
     offerAndBenefitTermsUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/partner/print/business-card/microsite/amz/amazon-prime-business-credit-card/ep-30214?print=false#offer-terms`,
     ratesAndFeesUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/partner/print/business-card/microsite/amz/amazon-prime-business-credit-card/ep-30214?print=false`,
     quickCompareImage: '',
-    quickCompare: [],
+    vacPopOut: [
+      {
+        kind: 'heading-5',
+        content: 'Get a $125 Amazon.com Gift Card',
+        extraClasses: 'font-weight-bold',
+      },
+      {
+        kind: 'p',
+        content:
+          'Get a <span class="heading-4 font-weight-bold">$125</span> Amazon.com Gift Card upon approval for the Amazon Business Prime American Express Card.<sup>†</sup>',
+      },
+      {
+        kind: 'heading-4',
+        content: 'Great For:',
+        extraClasses: 'font-weight-bold',
+      },
+      {
+        kind: 'ul',
+        content: [
+          '<strong>5% Back</strong> or 90-day terms on U.S. purchases at Amazon. Terms and Cap Applies<sup>‡</sup>',
+          '<strong>2% Back</strong> on U.S. Wireless Telephone Services<sup>‡</sup>',
+          '<strong>2% Back</strong> at U.S. Restaurants<sup>‡</sup>',
+        ],
+      },
+    ],
+    quickCompare: [
+      {
+        kind: 'heading-5',
+        content: 'Get a $125 Amazon.com Gift Card',
+        extraClasses: 'font-weight-bold',
+      },
+      {
+        kind: 'p',
+        content:
+          'Get a <span class="heading-4 font-weight-bold">$125</span> Amazon.com Gift Card upon approval for the Amazon Business Prime American Express Card.<sup>†</sup>',
+      },
+      {
+        kind: 'heading-4',
+        content: 'Great For:',
+        extraClasses: 'font-weight-bold',
+      },
+      {
+        kind: 'ul',
+        content: [
+          '<strong>5% Back</strong> or 90-day terms on U.S. purchases at Amazon. Terms and Cap Applies<sup>‡</sup>',
+          '<strong>2% Back</strong> on U.S. Wireless Telephone Services<sup>‡</sup>',
+          '<strong>2% Back</strong> at U.S. Restaurants<sup>‡</sup>',
+        ],
+      },
+    ],
     greatForTitle: 'Great For Title',
     greatFor: [
       {

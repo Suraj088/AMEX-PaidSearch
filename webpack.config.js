@@ -1,13 +1,13 @@
 const { resolve } = require('path');
 const { pathExists, readdirSync } = require('fs-extra');
 const importFresh = require('import-fresh');
-const { Environment, FileSystemLoader } = require('nunjucks');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const WatchExternalFilesPlugin = require('webpack-watch-files-plugin').default;
+const { Environment, FileSystemLoader } = require('nunjucks');//These are components of the Nunjucks templating engine, used to set up Nunjucks for rendering HTML templates.
+const { CleanWebpackPlugin } = require('clean-webpack-plugin'); //A Webpack plugin for cleaning the output directory before each build.
+const MiniCssExtractPlugin = require('mini-css-extract-plugin'); //A Webpack plugin for extracting CSS into separate files.
+const HtmlWebpackPlugin = require('html-webpack-plugin'); //A Webpack plugin for generating HTML files that include links to generated bundles.
+const CopyWebpackPlugin = require('copy-webpack-plugin'); //A Webpack plugin for copying static assets from one location to another in the output directory.
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin'); //A Webpack plugin for type-checking TypeScript files in parallel.
+const WatchExternalFilesPlugin = require('webpack-watch-files-plugin').default; //A Webpack plugin for watching external files.
 
 const { replaceExtension } = require('./tools/replace-extension');
 const { SuppressExtractedTextChunks } = require('./tools/suppress-entry-chunks-webpack-plugin');

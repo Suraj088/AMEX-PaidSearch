@@ -15,6 +15,7 @@ export function emitControlValueEvent(
     cancelable: false,
     bubbles: false,
   });
+  console.log(event,'event')
   eventTarget.dispatchEvent(event);
   return event;
 }

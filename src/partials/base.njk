@@ -1,68 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=1"
     />
 
     <title>{{ title }}</title>
-    <meta name="description" content="{{ description }}" />
-    <link rel="preconnect" href="https://www.aexp-static.com" crossorigin />
+    <meta name="description" content="{{ description }}"/>
+    <link rel="preconnect" href="https://www.aexp-static.com" crossorigin/>
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
     <script>
-    jQuery(document).ready(function () {
-      const dataContainer = document.getElementById("data-container");
-      const dataContainerInitial = document.getElementById(
-        "data-container-initial"
-      );
-      if (dataContainer || dataContainerInitial) {
-        while (dataContainerInitial.hasChildNodes()) {
-          dataContainer.appendChild(
-            dataContainerInitial.removeChild(dataContainerInitial.firstChild)
-          );
+      jQuery(document).ready(function () {
+        const dataContainer = document.getElementById("data-container");
+        const dataContainerInitial = document.getElementById("data-container-initial");
+        if (dataContainer || dataContainerInitial) {
+          while (dataContainerInitial.hasChildNodes()) {
+            dataContainer.appendChild(dataContainerInitial.removeChild(dataContainerInitial.firstChild));
+          }
         }
-      }
-      jQuery("#card-category-input-1").click(function () {
-        window.location.href = "./low-funnel-best.html";
+        jQuery("#card-category-input-1").click(function () {
+          window.location.href = "./low-funnel-best.html";
+        });
+        jQuery("#card-category-input-2").click(function () {
+          window.location.href = "./low-funnel-cash-back.html";
+        });
+        jQuery("#card-category-input-3").click(function () {
+          window.location.href = "./low-funnel-rewards.html";
+        });
+        
+        jQuery("#card-category-input-4").click(function () {
+          window.location.href = "./low-funnel-travel.html";
+        });
+        jQuery("#card-category-input-5").click(function () {
+          window.location.href = "./low-funnel-no-fee.html";
+        });
+        jQuery("#card-category-input-6").click(function () {
+          window.location.href = "./low-funnel-view-all-cards.html";
+        });
+         jQuery("#card-category-input-7").click(function () {
+          window.location.href = "./low-funnel-compare.html";
+        });
       });
-      jQuery("#card-category-input-2").click(function () {
-        window.location.href = "./low-funnel-cash-back.html";
-      });
-      jQuery("#card-category-input-3").click(function () {
-        window.location.href = "./low-funnel-rewards.html";
-      });
-      jQuery("#card-category-input-4").click(function () {
-        window.location.href = "./low-funnel-travel.html";
-      });
-      jQuery("#card-category-input-5").click(function () {
-        window.location.href = "./low-funnel-no-fee.html";
-      });
-       jQuery("#card-category-input-6").click(function () {
-        window.location.href = "./low-funnel-view.html";
-      });
-    });
     </script>
-
-    {%- if constants.DENTSU_IS_DEMO %}
-    <!-- Commented out only on Dentsu demo pages -->
-    <!--
-    <script type="text/javascript" src="//s.ntv.io/js/ntv-amex-companions.min.js" async></script>
-    <script type="text/javascript" src="//s.ntv.io/serve/load.js" async></script>
-     -->
-    {%- else -%}
-    {# <script type="text/javascript" src="//s.ntv.io/js/ntv-amex-companions.min.js" async></script>
-    <script type="text/javascript" src="//s.ntv.io/serve/load.js" async></script> #}
-    {% endif -%}
-
-    <link rel="stylesheet" href="{{ constants.AXP_STATIC_DLS_DIST }}/6.18.4/styles/dls.min.css" />
+    <script>
+      var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+          sURLVariables = sPageURL.split("&"),
+          sParameterName,
+          i;
+        for (i = 0; i < sURLVariables.length; i++) {
+          sParameterName = sURLVariables[i].split("=");
+          if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined
+              ? true
+              : sParameterName[1];
+          }
+        }
+      };
+      var extlinkparams = getUrlParameter("extlink");
+      if (extlinkparams) {
+        var q_macros = extlinkparams.split(/\-(?=[^\-]+$)/)[1];
+        $('meta[key="kwid"]').attr("values", q_macros);
+        var kvpMap = {};
+        kvpMap["kwid"] = q_macros;
+        window.ntvConfig = window.ntvConfig || {};
+        window.ntvConfig.keyValues = kvpMap;
+      }
+    </script>
+    {%- block omniture %}{% endblock %}
+    <img
+    height="1"
+    width="1"
+    style="border-style: none"
+    alt=""
+    src="//www.googleadservices.com/pagead/conversion/688694068/?label=2UzCCNOHs8wBELTGssgC&amp;guid=ON&amp;script=0"
+    />
+    <img
+    src="https://ad.doubleclick.net/ddm/activity/src=8538740;type=produ3;cat=k9_m2;u3=[URL];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;ord=1;num=5909021178?"
+    width="1"
+    height="1"
+    alt=""
+    />
+    <script
+    type="text/javascript"
+    src="https://www.americanexpress.com/ensighten-head-domestic"
+    ></script>
+    <link rel="stylesheet" href="{{ constants.AXP_STATIC_DLS_DIST }}/6.18.4/styles/dls.min.css"/>
+    <!-- Start VWO Async SmartCode -->
+    <script type='text/javascript' id='vwoCode'>
+    window._vwo_code=window._vwo_code || (function() {
+    var account_id=407476,
+    version=1.4,
+    settings_tolerance=2000,
+    library_tolerance=2500,
+    use_existing_jquery=false,
+    is_spa=1,
+    hide_element='body',
+    /* DO NOT EDIT BELOW THIS LINE */
+    f=false,d=document,vwoCodeEl=document.querySelector('#vwoCode'),code={use_existing_jquery:function(){return use_existing_jquery},library_tolerance:function(){return library_tolerance},finish:function(){if(!f){f=true;var e=d.getElementById('_vis_opt_path_hides');if(e)e.parentNode.removeChild(e)}},finished:function(){return f},load:function(e){var t=d.createElement('script');t.fetchPriority='high';t.src=e;t.type='text/javascript';t.innerText;t.onerror=function(){_vwo_code.finish()};d.getElementsByTagName('head')[0].appendChild(t)},getVersion:function(){return version},getMatchedCookies:function(e){var t=[];if(document.cookie){t=document.cookie.match(e)||[]}return t},getCombinationCookie:function(){var e=code.getMatchedCookies(/(?:^|;)\s?(_vis_opt_exp_\d+_combi=[^;$]*)/gi);e=e.map(function(e){try{var t=decodeURIComponent(e);if(!/_vis_opt_exp_\d+_combi=(?:\d+,?)+\s*$/.test(t)){return''}return t}catch(e){return''}});var i=[];e.forEach(function(e){var t=e.match(/([\d,]+)/g);t&&i.push(t.join('-'))});return i.join('|')},init:function(){window.settings_timer=setTimeout(function(){_vwo_code.finish()},settings_tolerance);var e=d.createElement('style'),t=hide_element?hide_element+'{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}':'',i=d.getElementsByTagName('head')[0];e.setAttribute('id','_vis_opt_path_hides');vwoCodeEl&&e.setAttribute('nonce',vwoCodeEl.nonce);e.setAttribute('type','text/css');if(e.styleSheet)e.styleSheet.cssText=t;else e.appendChild(d.createTextNode(t));i.appendChild(e);var n=this.getCombinationCookie();this.load('https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&f='+ +is_spa+'&vn='+version+(n?'&c='+n:''));return settings_timer}};window._vwo_settings_timer = code.init();return code;}());
+    </script>
+    <!-- End VWO Async SmartCode -->
   </head>
   <body>
     {%- block before_main %}{% endblock %}
 
-    <main>{%- block main %}{% endblock %}</main>
+    <main>
+      {%- block main %}{% endblock %}
+    </main>
 
     {%- block after_main %}{% endblock %}
 

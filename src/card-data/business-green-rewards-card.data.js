@@ -6,25 +6,26 @@
 module.exports = () => {
   return {
     id: 'business-green-rewards-card',
-    name: 'American&nbsp;Express<sup>®</sup> Business&nbsp;Green&nbsp;Card',
+    name: 'Business Green Rewards Card',
     url: `https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-green-card-amex/30214/`,
     pdpUrl: 'https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-green-card-amex/30214/?linknav=US-Acq-GCP-BusinessCards-ViewAllCards-CardTitle-Green',
     applyUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/business-green-rewards-charge-card/30214-9-0?intlink=US-Acq-NonBrandSearch-GreenCard-Apply-Green`,
-    image: `https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/business-green-rewards.png`,
-    annualFee: '0 intro',
-    membershipRewards:true,
-    BusinessServices:true,
-    Travel:true,
-    annualFeeSymbols: null,
-    annualFeeSubtext: 'for the first year, then&nbsp;$95<sup>†¤</sup>',
+    image: `assets/business-green-card-updated.png`,
+    annualFee: '95',
+    aprText: ' ',
+    membershipRewards: true,
+    BusinessServices: true,
+    Travel: true,
+    annualFeeSymbols: '¤',
+    // annualFeeSubtext: 'for the first year, then&nbsp;$95<sup>†¤</sup>',
     offerAndBenefitTermsUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/business-green-rewards-charge-card/30214-9-0?key=tncBody&rwdFlag=rwd#offer-terms`,
     ratesAndFeesUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/business-green-rewards-charge-card/30214-9-0?key=tncBody&rwdFlag=rwd`,
     quickCompareImage: 'assets/lifestyle-business-green-rewards-card-1635749061.png',
     quickCompareColor: '#F2F5F7',
-    quickCompare: [
+    vacPopOut: [
       {
         kind: 'heading-5',
-        content: 'Rewarding your travel plans, dinner plans and everything in&nbsp;between',
+        content: 'Rewards and Purchasing Power in One Card',
         extraClasses: 'font-weight-bold',
       },
       {
@@ -40,9 +41,34 @@ module.exports = () => {
       {
         kind: 'ul',
         content: [
-          '<strong>2X points</strong> for each dollar you spend on eligible purchases at <a href="http://amextravel.com" target="_blank" rel="noopener noreferrer">amextravel.com</a><sup>‡</sup>',
+          '<strong>2X points</strong> for each dollar you spend on eligible purchases at <a href="http://AmexTravel.com" target="_blank" rel="noopener noreferrer">AmexTravel.com</a><sup>‡</sup>',
           '<strong>1X points</strong> for each dollar you spend on eligible purchases<sup>‡</sup>',
-          'Pay Over Time Option<sup>‡</sup>',
+          'Pay over time with interest, or pay your full balance each month, whichever is best for your business. See details below.<sup>‡¤</sup>',
+        ],
+      },
+    ],
+    quickCompare: [
+      {
+        kind: 'heading-5',
+        content: 'Rewards and Purchasing Power in One Card',
+        extraClasses: 'font-weight-bold',
+      },
+      {
+        kind: 'p',
+        content:
+          'Earn <span class="heading-4 font-weight-bold">15,000</span> Membership Rewards<sup>®</sup> points after you spend $3,000 in eligible purchases on the Card within your first 3 months of Card&nbsp;Membership.<sup>†</sup>',
+      },
+      {
+        kind: 'heading-4',
+        content: 'Great For:',
+        extraClasses: 'font-weight-bold',
+      },
+      {
+        kind: 'ul',
+        content: [
+          '<strong>2X points</strong> for each dollar you spend on eligible purchases at <a href="http://AmexTravel.com" target="_blank" rel="noopener noreferrer">AmexTravel.com</a><sup>‡</sup>',
+          '<strong>1X points</strong> for each dollar you spend on eligible purchases<sup>‡</sup>',
+          'Pay over time with interest, or pay your full balance each month, whichever is best for your business. See details below.<sup>‡¤</sup>',
         ],
       },
     ],
@@ -50,7 +76,7 @@ module.exports = () => {
     greatFor: [
       {
         iconKey: 'point-2x',
-        label: `<strong>2X points</strong> for each dollar you spend on eligible purchases at <a href="http://amextravel.com" target="_blank" rel="noopener noreferrer">amextravel.com</a><sup>‡</sup>`,
+        label: `<strong>2X points</strong> for each dollar you spend on eligible purchases at <a href="http://AmexTravel.com" target="_blank" rel="noopener noreferrer">AmexTravel.com</a><sup>‡</sup>`,
       },
       {
         iconKey: 'recent-points',
@@ -58,7 +84,7 @@ module.exports = () => {
       },
       {
         iconKey: 'pay-over-time',
-        label: `Pay Over Time Option<sup>‡</sup>`,
+        label: `Pay over time with interest, or pay your full balance each month, whichever is best for your business.<sup>‡¤</sup>`,
       },
     ],
     welcomeOffer: [
@@ -83,7 +109,7 @@ module.exports = () => {
       },
       {
         kind: 'p',
-        content: `<strong>2X</strong> on each dollar you spend on eligible purchases at <a href="http://amextravel.com" target="_blank" rel="noopener noreferrer">amextravel.com</a><sup>‡</sup>`,
+        content: `<strong>2X</strong> on each dollar you spend on eligible purchases at <a href="http://AmexTravel.com" target="_blank" rel="noopener noreferrer">AmexTravel.com</a><sup>‡</sup>`,
       },
       {
         kind: 'p',
@@ -97,7 +123,7 @@ module.exports = () => {
       },
       {
         kind: 'p',
-        content: `The Pay Over Time option lets you carry a balance with interest on eligible purchases.*`,
+        content: `The Pay Over Time option lets you carry a balance with interest on eligible purchases.*<sup>¤</sup>`,
       },
       {
         kind: 'p',
@@ -120,7 +146,12 @@ module.exports = () => {
       },
       {
         kind: 'p',
-        content: `Unlike a traditional credit card, Business Green Rewards Card has no preset spending limit, a unique feature that gives you the ability to unlock more purchase power as you use your Card. The amount you can spend adapts based on factors such as your purchase, payment and credit history. You can use the Check Spending Power tool in your online account or mobile app to check if a large purchase will be approved.<sup>‡</sup>`,
+        content: `Unlike a traditional credit card, Business Green Rewards Card has no preset spending limit, a unique feature that gives you the ability to unlock more purchase power as you use your Card. The amount you can spend adapts based on factors such as your purchase, payment and credit history. You can use the Check Spending Power tool in your online account or mobile app to check if a large purchase will be approved.<sup>‡[1]</sup>`,
+      },
+      {
+        kind: 'p',
+        content: `[1]This means your spending limit is flexible. Unlike a traditional credit card with a set limit, the amount you can spend adapts based on factors such as your purchase, payment, and credit history.`,
+        extraClasses: 'legal-1',
       },
       {
         kind: 'heading-3',
@@ -128,7 +159,7 @@ module.exports = () => {
       },
       {
         kind: 'p',
-        content: `You can make the most out of paying your business bills. Improve your cash flow and take advantage of Card benefits when you use your Card to pay bills with Vendor Pay by Bill.com.<sup>‡</sup>`,
+        content: `Take advantage of Vendor Pay by Bill.com by enrolling your Card. With the Basic plan, there is no monthly fee for the first user and no fee for a second user for six months. After six months, the second user will have a fee of $15 per month. Additional fees may apply based on plan type and number of users.<sup>‡</sup>`,
       },
     ],
   };

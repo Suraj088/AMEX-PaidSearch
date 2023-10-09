@@ -6,12 +6,13 @@
 module.exports = () => {
   return {
     id: 'marriott-bonvoy-business-card',
-    name: 'Marriott Bonvoy Business<sup>™</sup>&nbsp;American Express<sup>®</sup>Card',
+    name: 'Marriott Bonvoy Business<sup>®</sup> American Express<sup>®</sup> Card',
     url: `https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/amex-marriott-bonvoy-business-credit-card/30214/`,
     pdpUrl: 'https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/amex-marriott-bonvoy-business-credit-card/30214/?linknav=US-Acq-GCP-BusinessCards-ViewAllCards-CardTitle-Marriott',
     applyUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/marriott-bonvoy-business-american-express-card/30214-9-0?intlink=US-Acq-NonBrandSearch-MarriottBonvoyBusinessCard-Apply-MarriottBonvoyBusiness`,
-    image: `https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/amex-marriott-bonvoy-business.png`,
+    image: `assets/marriott-bonvoy-business-updated.png`,
     annualFee: 125,
+    aprText:' ',
     Hotel:true,
     Dining:true,
     Gas:true,
@@ -22,16 +23,16 @@ module.exports = () => {
     ratesAndFeesUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/marriott-bonvoy-business-american-express-card/30214-9-0?key=tncBody&rwdFlag=rwd`,
     quickCompareImage: 'assets/lifestyle-marriott-bonvoy-business-card-1635749061.png',
     quickCompareColor: '#F5F0E4',
-    quickCompare: [
+    vacPopOut: [
       {
         kind: 'heading-5',
-        content: 'Free nights, late checkouts, travel&nbsp;rewards',
+        content: 'Everyday rewards and Marriott Bonvoy status',
         extraClasses: 'font-weight-bold',
       },
       {
         kind: 'p',
         content:
-          'Earn <span class="heading-4 font-weight-bold">75,000</span> Marriott Bonvoy bonus points after you use your new Card to make $3,000 in purchases within the first 3 months of Card Membership.<sup>†</sup>',
+          'Earn <span class="heading-4 font-weight-bold">75,000</span> Bonus Marriott Bonvoy points after you use your new Card to make $3,000 in purchases within the first 3 months of Card Membership.<sup>†</sup>',
       },
       {
         kind: 'heading-4',
@@ -41,26 +42,52 @@ module.exports = () => {
       {
         kind: 'ul',
         content: [
-          '<strong>6X points</strong> per dollar on eligible purchases at hotels participating in Marriott&nbsp;Bonvoy&trade;.<sup>‡</sup>',
-          '<strong>4X points</strong> at U.S. restaurants, at U.S. gas stations, on wireless telephone services purchased directly from U.S. service providers and on U.S. purchases for&nbsp;shipping.<sup>‡</sup>',
+          '<strong>6X points</strong> per dollar on eligible purchases at hotels participating in Marriott Bonvoy<sup>®</sup>.<sup>‡</sup>',
+          '<strong>4X points</strong> for purchases made at restaurants worldwide, at U.S. gas stations, on wireless telephone services purchased directly from U.S. service providers and on U.S. purchases for shipping.<sup>‡</sup>',
           '<strong>2X points</strong> on all other eligible purchases.<sup>‡</sup>',
-          'Complimentary Marriott Bonvoy Silver Elite&nbsp;status<sup>‡</sup>',
+          'Complimentary Marriott Bonvoy Gold Elite status<sup>‡</sup>',
         ],
       },
     ],
-    greatForTitle: 'Marriot stays, travel purchases, and everyday business spending:',
+    quickCompare: [
+      {
+        kind: 'heading-5',
+        content: 'Everyday rewards and Marriott Bonvoy status',
+        extraClasses: 'font-weight-bold',
+      },
+      {
+        kind: 'p',
+        content:
+          'Earn <span class="heading-4 font-weight-bold">75,000</span> Bonus Marriott Bonvoy points after you use your new Card to make $3,000 in purchases within the first 3 months of Card Membership.<sup>†</sup>',
+      },
+      {
+        kind: 'heading-4',
+        content: 'Great For:',
+        extraClasses: 'font-weight-bold',
+      },
+      {
+        kind: 'ul',
+        content: [
+          '<strong>6X points</strong> per dollar on eligible purchases at hotels participating in Marriott Bonvoy<sup>®</sup>.',
+          '<strong>4X points</strong> for purchases made at restaurants worldwide, at U.S. gas stations, on wireless telephone services purchased directly from U.S. service providers and on U.S. purchases for shipping.<sup>‡</sup>',
+          '<strong>2X points</strong> on all other eligible purchases.<sup>‡</sup>',
+          'Complimentary Marriott Bonvoy Gold Elite status<sup>‡</sup>',
+        ],
+      },
+    ],
+    greatForTitle: 'Marriott stays, travel purchases, and everyday business spending:',
     greatFor: [
       {
         iconKey: 'travel-bag',
-        label: `<strong>6X</strong> points per dollar on eligible purchases at hotels participating in Marriott&nbsp;Bonvoy&trade;.<sup>‡</sup>`,
+        label: `<strong>6X</strong> points per dollar on eligible purchases at hotels participating in Marriott&nbsp;Bonvoy<sup>®</sup>.<sup>‡</sup>`,
       },
       {
         iconKey: 'dining',
-        label: `<strong>4X</strong> points at U.S. restaurants, at U.S. gas stations, on wireless telephone services purchased directly from U.S. service providers and on U.S. purchases for shipping.<sup>‡</sup>`,
+        label: `<strong>4X</strong> points for purchases made at restaurants worldwide, at U.S. gas stations, on wireless telephone services purchased directly from U.S. service providers and on U.S. purchases for shipping.<sup>‡</sup>`,
       },
       {
         iconKey: 'medal',
-        label: `Complimentary Marriott Bonvoy Silver Elite status<sup>‡</sup>`,
+        label: `Enjoy complimentary Marriott Bonvoy Gold Elite status with your Card.<sup>‡</sup>`,
       },
     ],
     welcomeOffer: [
@@ -71,7 +98,7 @@ module.exports = () => {
       {
         kind: 'p',
         content:
-          'Marriott Bonvoy bonus points after you use your new Card to make $3,000 in purchases within the first 3 months of Card Membership.<sup>†</sup>',
+          'Bonus Marriott Bonvoy points after you use your new Card to make $3,000 in purchases within the first 3 months of Card Membership.<sup>†</sup>',
       },
     ],
     earningRewards: [
@@ -82,7 +109,7 @@ module.exports = () => {
       },
       {
         kind: 'heading-4',
-        content: `Earn Marriot Bonvoy Points`,
+        content: `Earn Marriott Bonvoy Points`,
       },
       {
         kind: 'p',
@@ -90,16 +117,7 @@ module.exports = () => {
       },
       {
         kind: 'p',
-        content: `<strong>4X points</strong>`,
-      },
-      {
-        kind: 'ul',
-        content: [
-          `at U.S. restaurants, including takeout & delivery`,
-          `at U.S. gas stations`,
-          `on U.S. purchases for shipping`,
-          `on wireless phone services purchased directly from U.S. service providers<sup>‡</sup>`,
-        ],
+        content: '<strong>4X points</strong> for purchases made at restaurants worldwide, at U.S. gas stations, on wireless telephone services purchased directly from U.S. service providers and on U.S. purchases for shipping.<sup>‡</sup>',
       },
       {
         kind: 'p',
@@ -109,11 +127,11 @@ module.exports = () => {
     moreBenefits: [
       {
         kind: 'heading-3',
-        content: `Complimentary Silver Elite Status`,
+        content: `Complimentary Gold Elite Status<sup>‡</sup>`,
       },
       {
         kind: 'p',
-        content: `Receive complimentary Marriott Bonvoy Silver Elite status with your Card, which includes priority late checkout when available and 10% bonus points on stays.<sup>‡</sup>`,
+        content: `Receive complimentary Marriott Bonvoy Gold Elite status with your Card, which includes priority late checkout when available and 25% bonus points on stays.<sup>‡</sup> Gold Elite status benefits are only available when booked with Qualifying Rates. For more information about Gold Elite status and complete Terms and Conditions, visit marriottbonvoy.com.`,
       },
       {
         kind: 'heading-3',
@@ -121,7 +139,7 @@ module.exports = () => {
       },
       {
         kind: 'p',
-        content: `Receive 1 Free Night Award every year after your Card renewal month. Plus, earn an additional Free Night Award after you spend $60K in purchases on your Card in a calendar year. Awards can be used for one night (redemption level at or under 35,000 Marriott Bonvoy points) at hotels participating in the Marriott Bonvoy<sup>TM</sup> program. Certain hotels have resort fees.<sup>‡</sup>`,
+        content: `You will receive 1 Free Night Award every year after your Card renewal month. Plus, you can earn an additional Free Night Award after you spend $60,000 in purchases on your Card in a calendar year. Awards can be used for one night at a hotel participating in Marriott Bonvoy<sup>®</sup> with a redemption level at or under 35,000 Marriott Bonvoy<sup>®</sup> points. Certain hotels have resort fees.<sup>‡</sup>`,
       },
       {
         kind: 'heading-3',
@@ -129,7 +147,15 @@ module.exports = () => {
       },
       {
         kind: 'p',
-        content: `Each calendar year you can receive 15 Elite Night Credits towards the next level of Marriott Bonvoy Elite status. Limitations apply per Marriott Bonvoy member account. Benefit is not exclusive to Cards offered by American Express. Terms apply.<sup>‡</sup>`,
+        content: `Each calendar year you can receive 15 Elite Night Credits towards the next level of Marriott Bonvoy Elite status with your Marriott Bonvoy Business<sup>®</sup> American Express<sup>®</sup> Card. Limitations apply per Marriott Bonvoy member account. Benefit is not exclusive to Cards offered by American Express. Terms apply.<sup>‡</sup>`,
+      },
+      {
+        kind: 'heading-3',
+        content: `7% Marriott Bonvoy Room Rate Discount`,
+      },
+      {
+        kind: 'p',
+        content: `Receive a 7% discount off standard rates for reservations of standard guest rooms at hotels which participate in the Marriott Bonvoy program when you book directly. Terms and Conditions Apply.<sup>‡</sup>`,
       },
       {
         kind: 'heading-3',

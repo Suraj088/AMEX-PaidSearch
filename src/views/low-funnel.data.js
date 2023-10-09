@@ -7,8 +7,8 @@ module.exports = () => {
           title: 'Purchase Protection<sup>♦</sup>',
           iconClass: 'dls-icon-overdraft-protection',
           content: [
-            `Sometimes your favorite new purchase gets stolen, accidentally damaged, or lost. But when you use your Eligible Card for Covered Purchases, your Membership can help protect them for up to 90 days from the Covered Purchase date. Please read important exclusions and&nbsp;restrictions.*`,
-            `*Up to $10,000 per occurrence, $50,000 per calendar&nbsp;year.`,
+            `Sometimes your favorite new purchase gets stolen or accidentally damaged. But when you use your Eligible Card for Covered Purchases, your Membership can help protect them for up to 90 days from the Covered Purchase date, subject to the Coverage Limits.*`,
+            `*Up to $1,000 per occurrence, $50,000 per calendar year.`,
           ],
         },
         {
@@ -16,7 +16,7 @@ module.exports = () => {
           iconClass: 'dls-icon-global',
           content: [
             `Earn rewards.<sup>‡</sup> Set boundaries. Stay up to date.`,
-            `Think of Employee Cards as another tool you can use to stay on top of your expenses. Let employees buy what they need within limits<sup>‡</sup> you set. You'll earn rewards<sup>‡</sup> on their purchases, and receive real-time alerts to help you know who’s spending and&nbsp;where.`,
+            `Think of Employee Cards as another tool you can use to stay on top of your expenses. Let employees buy what they need within limits<sup>‡</sup> you set. You'll earn rewards<sup>‡</sup> for purchases on Employee Cards in the same way you do on your own purchases.`,
           ],
         },
         {

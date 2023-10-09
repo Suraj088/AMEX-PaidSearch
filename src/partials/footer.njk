@@ -1,162 +1,429 @@
-<footer class="nav nav-horizontal border nav-chevron nav-footer" data-toggle="nav" data-responsive="md">
-  <nav class="container">
-    <ul class="nav-menu">
-      {%- for column in footer.columns %}
-        <li class="nav-item">
-          <h2 class="nav-link caret heading-1">
-            {{ column.title }}
-          </h2>
-          <div class="nav-menu">
-            <div class="nav-menu-section">
-              <ul>
-                {%- for link in column.links %}
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{ link.href }}" rel="noreferrer noopener" target="{{ link.target | default('') }}">
-                      {{ link.text }}
-                    </a>
-                  </li>
-                {%- endfor %}
-              </ul>
-            </div>
-          </div>
-        </li>
-      {%- endfor %}
-    </ul>
-  </nav>
-  <div class="container">
-    <hr/>
-    <div class="stack-3 pad-2-lr pad-3-t pad-4-b">
-      <div class="row">
-        <div class="col-md-6">
-          <span class="dls-logo-line-sm">
-            <img src="{{ footer.logo.imageSrc }}" alt="{{ footer.logo.text }}"/>
-          </span>
-        </div>
-        <div class="col-md-6 text-align-left text-align-right-md-up margin-3-t-sm-down">
-          <span class="dls-flag flag-sm margin-1-r">
-            <img src="{{ footer.countrySelector.current.imageSrc }}" alt="{{ footer.countrySelector.current.text }} Flag"/>
-          </span>
-          {{ footer.countrySelector.current.text }}
-          <a href="{{ footer.countrySelector.link.href }}" class="margin-1-l">
-            {{ footer.countrySelector.link.text }}
-          </a>
-        </div>
-      </div>
-      <div>
-        {%- for link in footer.social.links %}
-          <a href="{{ link.href }}" rel="noreferrer noopener" target="{{ link.target | default('') }}">
-            <img class="imagephoto-social" src="{{ link.imageSrc }}" alt="{{ link.text }}"/>
-          </a>
-        {%- endfor %}
-      </div>
-      <div>
-        <ul class="list-links-inline-separator">
-          {%- for link in footer.legal.links %}
-            <li>
-              <a href="{{ link.href }}" rel="noreferrer noopener" target="{{ link.target | default('') }}">
-                {{ link.text }}
-              </a>
+    <footer class="nav nav-horizontal border nav-chevron nav-footer" data-toggle="nav" data-responsive="md">
+      <nav class="container">
+        <ul class="nav-menu">
+          {%- for column in footer.columns %}
+            <li class="nav-item">
+              <h2 class="nav-link caret heading-1">
+                {{ column.title }}
+              </h2>
+              <div class="nav-menu">
+                <div class="nav-menu-section">
+                  <ul>
+                    {%- for link in column.links %}
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{ link.href }}" rel="noreferrer noopener" target="{{ link.target | default('') }}">
+                          {{ link.text }}
+                        </a>
+                      </li>
+                    {%- endfor %}
+                  </ul>
+                </div>
+              </div>
             </li>
           {%- endfor %}
         </ul>
+      </nav>
+      <div class="container">
+        <hr/>
+        <div class="stack-3 pad-2-lr pad-3-t pad-4-b">
+          <div class="row">
+            <div class="col-md-6">
+              <span class="dls-logo-line-sm">
+                <img src="{{ footer.logo.imageSrc }}" alt="{{ footer.logo.text }}"/>
+              </span>
+            </div>
+            <div class="col-md-6 text-align-left text-align-right-md-up margin-3-t-sm-down">
+              <span class="dls-flag flag-sm margin-1-r">
+                <img src="{{ footer.countrySelector.current.imageSrc }}" alt="{{ footer.countrySelector.current.text }} Flag"/>
+              </span>
+              {{ footer.countrySelector.current.text }}
+              <a href="{{ footer.countrySelector.link.href }}" class="margin-1-l">
+                {{ footer.countrySelector.link.text }}
+              </a>
+            </div>
+          </div>
+          <div>
+            {%- for link in footer.social.links %}
+              <a href="{{ link.href }}" rel="noreferrer noopener" target="{{ link.target | default('') }}">
+                <img class="imagephoto-social" src="{{ link.imageSrc }}" alt="{{ link.text }}"/>
+              </a>
+            {%- endfor %}
+          </div>
+          <div>
+            <ul class="list-links-inline-separator">
+              {%- for link in footer.legal.links %}
+                <li>
+                  <a href="{{ link.href }}" rel="noreferrer noopener" target="{{ link.target | default('') }}">
+                    {{ link.text }}
+                  </a>
+                </li>
+              {%- endfor %}
+            </ul>
+          </div>
+          <div class="stack">
+            <p>{{ footer.legal.disclaimer }}</p>
+            <p>{{ footer.legal.copyright | markdown | safe }}</p>
+          </div>
+        </div>
       </div>
-      <div class="stack">
-        <p>{{ footer.legal.disclaimer }}</p>
-        <p>{{ footer.legal.copyright | markdown | safe }}</p>
-      </div>
-    </div>
-  </div>
-</footer>
-<script type="text/javascript">
-  // Check category seleted in main menu to select same category in dropdown of sticky footer
-  const categorySelected = document.querySelector(
-    "input[name=card-category-input]:checked"
-  );
-  let categoryToSelectInDropdown = document.querySelector(
-    "#option-category-input input[name=card-category-input-selector]:checked"
-  );
+    </footer>
+    <script type="text/javascript">
+      // Check category seleted in main menu to select same category in dropdown of sticky footer
+      const categorySelected = document.querySelector("input[name=card-category-input]:checked");
+      let categoryToSelectInDropdown = document.querySelector("#option-category-input input[name=card-category-input-selector]:checked");
 
-  function loadCategorySelectedOnStart(categoryToSelectInDropdown) {
-    const categoryBox = categoryToSelectInDropdown.closest("li");
-    categoryBox.classList.add("active-container-option");
-    categoryBox.dataset.selected = "Y";
+      function loadCategorySelectedOnStart(categoryToSelectInDropdown) {
+        const categoryBox = categoryToSelectInDropdown.closest("li");
+        categoryBox
+          .classList
+          .add("active-container-option");
+        categoryBox.dataset.selected = "Y";
 
-    // Click event to open and close dropdown
-    const buttonActivateDropdown = document.querySelector("span.arrowDropdown");
-    const liOptions = document.querySelector("ul#option-category-input");
-    buttonActivateDropdown.addEventListener("click", function (ev) {
-      liOptions.querySelectorAll("li").forEach((li) => {
-        if (li.classList.contains("active-container-option")) {
-          if (li.dataset.selected != "Y") {
-            li.classList.remove("active-container-option");
-          }
-        } else {
-          li.classList.add("active-container-option");
-        }
-      });
-      buttonActivateDropdown.style.width = "20%";
-      buttonActivateDropdown.style.right = "0px";
-    });
-
-    // Click event to select option and close dropdown
-    const optionsDropdown = document.querySelectorAll(
-      "ul#option-category-input li label"
-    );
-    optionsDropdown.forEach((option) => {
-      option.addEventListener("click", function (eve) {
-        const mainParentOption = option.closest("li");
-        optionsDropdown.forEach((op) => {
-          op.closest("li").classList.remove("active-container-option");
-          op.closest("li").dataset.selected = "N";
+        // Click event to open and close dropdown
+        const buttonActivateDropdown = document.querySelector("span.arrowDropdown");
+        const liOptions = document.querySelector("ul#option-category-input");
+        buttonActivateDropdown.addEventListener("click", function (ev) {
+          liOptions
+            .querySelectorAll("li")
+            .forEach((li) => {
+              if (li.classList.contains("active-container-option")) {
+                if (li.dataset.selected != "Y") {
+                  li
+                    .classList
+                    .remove("active-container-option");
+                }
+              } else {
+                li
+                  .classList
+                  .add("active-container-option");
+              }
+            });
+          buttonActivateDropdown.style.width = "20%";
+          buttonActivateDropdown.style.right = "0px";
         });
 
-        mainParentOption.classList.add("active-container-option");
-        mainParentOption.dataset.selected = "Y";
-      });
-    });
+        // Click event to select option and close dropdown
+        const optionsDropdown = document.querySelectorAll("ul#option-category-input li label");
+        optionsDropdown.forEach((option) => {
+          option.addEventListener("click", function (eve) {
+            const mainParentOption = option.closest("li");
+            optionsDropdown.forEach((op) => {
+              op
+                .closest("li")
+                .classList
+                .remove("active-container-option");
+              op
+                .closest("li")
+                .dataset
+                .selected = "N";
+            });
 
-    // Click back to the top
-    const backToTheTop = document.querySelector("#backToTop");
-    backToTheTop.addEventListener("click", function (even) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  }
+            mainParentOption
+              .classList
+              .add("active-container-option");
+            mainParentOption.dataset.selected = "Y";
+          });
+        });
 
-  const intervalChecks = setInterval(checkCategoriesInDropdown, 100);
-  function checkCategoriesInDropdown() {
-    if (categoryToSelectInDropdown) {
-      loadCategorySelectedOnStart(categoryToSelectInDropdown);
-      clearInterval(intervalChecks);
-    } else {
-      categoryToSelectInDropdown = document.querySelector(
-        `#option-category-input input[name=card-category-input-selector][value=${categorySelected.value}]`
-      );
-    }
-  }
-
-  // Check scroll to top and active main menu as sticky nav
-  let isScrolling;
-  window.onscroll = function (e) {
-    const nav = document.querySelector("section.block--category-nav");
-    if (this.oldScroll > this.scrollY) {
-      nav.classList.add("sticky-nav-active");
-    } else {
-      if (nav.classList.contains("sticky-nav-active")) {
-        setTimeout(() => {
-          nav.classList.remove("sticky-nav-active");
-        }, 100);
+        // Click back to the top
+        const backToTheTop = document.querySelector("#backToTop");
+        backToTheTop.addEventListener("click", function (even) {
+          window.scrollTo({top: 0, behavior: "smooth"});
+        });
       }
-    }
-    this.oldScroll = this.scrollY;
 
-    window.clearTimeout(isScrolling);
-
-    isScrolling = setTimeout(function () {
-      if (nav.classList.contains("sticky-nav-active")) {
-        setTimeout(() => {
-          nav.classList.remove("sticky-nav-active");
-        }, 100);
+      const intervalChecks = setInterval(checkCategoriesInDropdown, 100);
+      function checkCategoriesInDropdown() {
+        if (categoryToSelectInDropdown) {
+          loadCategorySelectedOnStart(categoryToSelectInDropdown);
+          clearInterval(intervalChecks);
+        } else {
+          categoryToSelectInDropdown = document.querySelector(`#option-category-input input[name=card-category-input-selector][value=${categorySelected.value}]`);
+        }
       }
-    }, 1000);
-  };
-</script>
+
+      // Check scroll to top and active main menu as sticky nav
+      let isScrolling;
+      window.onscroll = function (e) {
+        const nav = document.querySelector("section.block--category-nav");
+        if (this.oldScroll > this.scrollY) {
+          nav
+            .classList
+            .add("sticky-nav-active");
+        } else {
+          if (nav.classList.contains("sticky-nav-active")) {
+            setTimeout(() => {
+              nav
+                .classList
+                .remove("sticky-nav-active");
+            }, 100);
+          }
+        }
+        this.oldScroll = this.scrollY;
+
+        window.clearTimeout(isScrolling);
+
+        isScrolling = setTimeout(function () {
+          if (nav.classList.contains("sticky-nav-active")) {
+            setTimeout(() => {
+              nav
+                .classList
+                .remove("sticky-nav-active");
+            }, 100);
+          }
+        }, 1000);
+      };
+    </script>
+    <script>
+      const fetchAPR = async () => {
+        fetch(
+          "https://cardshop.americanexpress.com/us/cardshop-api/api/v1/open/content/pzn/open_cd/44601/"
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            let elem = "";
+            let aprVal = "";
+            document
+              .querySelectorAll(".card-compare-content-node-container button")
+              .forEach(function (ele) {
+                if (ele.getAttribute("aria-pressed") === "true") {
+                  elem = ele.getAttribute("data-card-id");
+                }
+              });
+            if (elem === "business-platinum-card") {
+              data.pznData.forEach(function (apr) {
+                if (apr.shortName === "platinum") {
+                  aprVal = apr.rate;
+                }
+              });
+            }
+            if (elem === "amazon-business-card") {
+              data.pznData.forEach(function (apr) {
+                if (apr.shortName === "amazon-business") {
+                  aprVal = apr.rate;
+                }
+              });
+            }
+            if (elem === "amazon-business-prime-card") {
+              data.pznData.forEach(function (apr) {
+                if (apr.shortName === "amazon-business-prime") {
+                  aprVal = apr.rate;
+                }
+              });
+            }
+            if (elem === "blue-business-cash-card") {
+              data.pznData.forEach(function (apr) {
+                if (apr.shortName === "blue-business-cash") {
+                  aprVal = apr.rate;
+                }
+              });
+            }
+            if (elem === "blue-business-plus-credit-card") {
+              data.pznData.forEach(function (apr) {
+                if (apr.shortName === "blue-business-plus") {
+                  aprVal = apr.rate;
+                }
+              });
+            }
+            if (elem === "business-gold-card") {
+              data.pznData.forEach(function (apr) {
+                if (apr.shortName === "gold") {
+                  aprVal = apr.rate;
+                }
+              });
+            }
+            if (elem === "business-green-rewards-card") {
+              data.pznData.forEach(function (apr) {
+                if (apr.shortName === "green") {
+                  aprVal = apr.rate;
+                }
+              });
+            }
+            if (elem === "delta-sky-miles-gold-business-card") {
+              data.pznData.forEach(function (apr) {
+                if (apr.shortName === "gold-delta-skymiles") {
+                  aprVal = apr.rate;
+                }
+              });
+            }
+            if (elem === "delta-sky-miles-platinum-business-card") {
+              data.pznData.forEach(function (apr) {
+                if (apr.shortName === "platinum-delta-skymiles") {
+                  aprVal = apr.rate;
+                }
+              });
+            }
+            if (elem === "delta-sky-miles-reserve-business-card") {
+              data.pznData.forEach(function (apr) {
+                if (apr.shortName === "delta-reserve") {
+                  aprVal = apr.rate;
+                }
+              });
+            }
+            if (elem === "hilton-honors-business-card") {
+              data.pznData.forEach(function (apr) {
+                if (apr.shortName === "hilton-honors") {
+                  aprVal = apr.rate;
+                }
+              });
+            }
+            if (elem === "lowes-business-rewards-card") {
+              data.pznData.forEach(function (apr) {
+                if (apr.shortName === "lowes-business-rewards") {
+                  aprVal = apr.rate;
+                }
+              });
+            }
+            if (elem === "marriott-bonvoy-business-card") {
+              data.pznData.forEach(function (apr) {
+                if (apr.shortName === "starwood-preferred-guest") {
+                  aprVal = apr.rate;
+                }
+              });
+            }
+            aprVal = aprVal.slice(0, -17);
+            aprVal += " Variable APRs will not exceed 29.99%.<sup>¤</sup>";
+            document.querySelector(".dynamicAPR").innerHTML = aprVal;
+            const button = document.querySelectorAll(
+              ".card-compare-content-node-container button"
+            );
+            button.forEach(function (ele) {
+              ele.addEventListener("click", (event) => {
+                elem = ele.getAttribute("data-card-id");
+                if (elem === "business-platinum-card") {
+                  data.pznData.forEach(function (apr) {
+                    if (apr.shortName === "platinum") {
+                      aprVal = apr.rate;
+                      aprVal = aprVal.slice(0, -17);
+                      aprVal += " Variable APRs will not exceed 29.99%.<sup>¤</sup>";
+                      document.querySelector(".dynamicAPR").innerHTML = aprVal;
+                    }
+                  });
+                }
+                if (elem === "amazon-business-card") {
+                  data.pznData.forEach(function (apr) {
+                    if (apr.shortName === "amazon-business") {
+                      aprVal = apr.rate;
+                      aprVal = aprVal.slice(0, -17);
+                      aprVal += " Variable APRs will not exceed 29.99%.<sup>¤</sup>";
+                      document.querySelector(".dynamicAPR").innerHTML = aprVal;
+                    }
+                  });
+                }
+                if (elem === "amazon-business-prime-card") {
+                  data.pznData.forEach(function (apr) {
+                    if (apr.shortName === "amazon-business-prime") {
+                      aprVal = apr.rate;
+                      aprVal = aprVal.slice(0, -17);
+                      aprVal += " Variable APRs will not exceed 29.99%.<sup>¤</sup>";
+                      document.querySelector(".dynamicAPR").innerHTML = aprVal;
+                    }
+                  });
+                }
+                if (elem === "blue-business-cash-card") {
+                  data.pznData.forEach(function (apr) {
+                    if (apr.shortName === "blue-business-cash") {
+                      aprVal = apr.rate;
+                      aprVal = aprVal.slice(0, -17);
+                      aprVal += " Variable APRs will not exceed 29.99%.<sup>¤</sup>";
+                      document.querySelector(".dynamicAPR").innerHTML = aprVal;
+                    }
+                  });
+                }
+                if (elem === "blue-business-plus-credit-card") {
+                  data.pznData.forEach(function (apr) {
+                    if (apr.shortName === "blue-business-plus") {
+                      aprVal = apr.rate;
+                      aprVal = aprVal.slice(0, -17);
+                      aprVal += " Variable APRs will not exceed 29.99%.<sup>¤</sup>";
+                      document.querySelector(".dynamicAPR").innerHTML = aprVal;
+                    }
+                  });
+                }
+                if (elem === "business-gold-card") {
+                  data.pznData.forEach(function (apr) {
+                    if (apr.shortName === "gold") {
+                      aprVal = apr.rate;
+                      aprVal = aprVal.slice(0, -17);
+                      aprVal += " Variable APRs will not exceed 29.99%.<sup>¤</sup>";
+                      document.querySelector(".dynamicAPR").innerHTML = aprVal;
+                    }
+                  });
+                }
+                if (elem === "business-green-rewards-card") {
+                  data.pznData.forEach(function (apr) {
+                    if (apr.shortName === "green") {
+                      aprVal = apr.rate;
+                      aprVal = aprVal.slice(0, -17);
+                      aprVal += " Variable APRs will not exceed 29.99%.<sup>¤</sup>";
+                      document.querySelector(".dynamicAPR").innerHTML = aprVal;
+                    }
+                  });
+                }
+                if (elem === "delta-sky-miles-gold-business-card") {
+                  data.pznData.forEach(function (apr) {
+                    if (apr.shortName === "gold-delta-skymiles") {
+                      aprVal = apr.rate;
+                      aprVal = aprVal.slice(0, -17);
+                      aprVal += " Variable APRs will not exceed 29.99%.<sup>¤</sup>";
+                      document.querySelector(".dynamicAPR").innerHTML = aprVal;
+                    }
+                  });
+                }
+                if (elem === "delta-sky-miles-platinum-business-card") {
+                  data.pznData.forEach(function (apr) {
+                    if (apr.shortName === "platinum-delta-skymiles") {
+                      aprVal = apr.rate;
+                      aprVal = aprVal.slice(0, -17);
+                      aprVal += " Variable APRs will not exceed 29.99%.<sup>¤</sup>";
+                      document.querySelector(".dynamicAPR").innerHTML = aprVal;
+                    }
+                  });
+                }
+                if (elem === "delta-sky-miles-reserve-business-card") {
+                  data.pznData.forEach(function (apr) {
+                    if (apr.shortName === "delta-reserve") {
+                      aprVal = apr.rate;
+                      aprVal = aprVal.slice(0, -17);
+                      aprVal += " Variable APRs will not exceed 29.99%.<sup>¤</sup>";
+                      document.querySelector(".dynamicAPR").innerHTML = aprVal;
+                    }
+                  });
+                }
+                if (elem === "hilton-honors-business-card") {
+                  data.pznData.forEach(function (apr) {
+                    if (apr.shortName === "hilton-honors") {
+                      aprVal = apr.rate;
+                      aprVal = aprVal.slice(0, -17);
+                      aprVal += " Variable APRs will not exceed 29.99%.<sup>¤</sup>";
+                      document.querySelector(".dynamicAPR").innerHTML = aprVal;
+                    }
+                  });
+                }
+                if (elem === "lowes-business-rewards-card") {
+                  data.pznData.forEach(function (apr) {
+                    if (apr.shortName === "lowes-business-rewards") {
+                      aprVal = apr.rate;
+                      aprVal = aprVal.slice(0, -17);
+                      aprVal += " Variable APRs will not exceed 29.99%.<sup>¤</sup>";
+                      document.querySelector(".dynamicAPR").innerHTML = aprVal;
+                    }
+                  });
+                }
+                if (elem === "marriott-bonvoy-business-card") {
+                  data.pznData.forEach(function (apr) {
+                    if (apr.shortName === "starwood-preferred-guest") {
+                      aprVal = apr.rate;
+                      aprVal = aprVal.slice(0, -17);
+                      aprVal += " Variable APRs will not exceed 29.99%.<sup>¤</sup>";
+                      document.querySelector(".dynamicAPR").innerHTML = aprVal;
+                    }
+                  });
+                }
+              });
+            });
+          });
+      };
+      fetchAPR();
+    </script>
+    <script type="text/javascript" src="https://www.americanexpress.com/adobetracking"></script>

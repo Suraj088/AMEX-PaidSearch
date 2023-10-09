@@ -1,30 +1,30 @@
-<section class="block--category-nav">
-  <fieldset id="card-category-group" class="dls-white dls-bright-blue-bg">
-    <legend id="card-category-title" class="visually-hidden">
-      Select a business credit card category to&nbsp;view:
-    </legend>
-    <div class="block--category-nav--row">
-      {% for cat in cardCategories %}
-      <!-- prettier-ignore -->
-      <label
-        class="block--category-nav--option-label dls-white font-weight-bold margin-0 pad-1-tb pad-2-lr"
-        for="card-category-input-{{ loop.index }}"
-        id="data-{{ loop.index }}"
-      >
-        <input
-          type="radio"
-          name="card-category-input"
-          id="card-category-input-{{ loop.index }}"
-          class="block--category-nav--option-input visually-hidden"
-          value="{{ cat.key }}"
-          {% if cat.key === defaultCardCategory %} checked {% endif %}
-        />
-        <div class="block--category-nav--option-background"></div>
-        <div class="dls-white icon icon-sm icon-hover {{ cat.iconClass }}"></div>
-        <div class="dls-white icon icon-sm icon-checked {{ cat.iconClass }}-filled"></div>
-        <div class="dls-white heading-3 margin-1-l">{{ cat.label }}</div>
-      </label>
-      {% endfor %}
-    </div>
-  </fieldset>
-</section>
+    <section class="block--category-nav">
+      <fieldset id="card-category-group" class="dls-white dls-bright-blue-bg">
+        <legend id="card-category-title" class="visually-hidden">
+          Select a business credit card category to&nbsp;view:
+        </legend>
+        <div class="block--category-nav--row">
+          {% for cat in cardCategories %}
+          <!-- prettier-ignore -->
+          <label
+            class="block--category-nav--option-label dls-white font-weight-bold margin-0 pad-1-tb pad-2-lr"
+            for="card-category-input-{{ loop.index }}"
+            id="data-{{ loop.index }}"
+          >
+            <input
+              type="radio"
+              name="card-category-input"
+              id="card-category-input-{{ loop.index }}"
+              class="block--category-nav--option-input visually-hidden"
+              value="{{ cat.key }}"
+              {% if cat.key === defaultCardCategory %} checked {% endif %}
+            />
+            <div class="block--category-nav--option-background"></div>
+            <div class="dls-white icon icon-sm icon-hover {{ cat.iconClass }}"></div>
+            <div class="dls-white icon icon-sm icon-checked {{ cat.iconClass }}-filled"></div>
+            <div class="dls-white heading-3 margin-1-l">{{ cat.label }}</div>
+          </label>
+          {% endfor %}
+        </div>
+      </fieldset>
+    </section>

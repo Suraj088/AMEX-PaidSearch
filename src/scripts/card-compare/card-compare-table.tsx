@@ -2,6 +2,8 @@ import { h, JSX } from 'preact';
 import { useEffect, useMemo, useState } from 'preact/hooks';
 import { useSwipeable } from 'react-swipeable';
 import cx from 'classnames';
+import {Compare} from './compare';
+
 
 import { useCompareItemDisplayState } from './use-compare-item-display-state';
 import { CardCompareContentNode } from './card-compare-content-node';
@@ -19,7 +21,6 @@ import { CardFilterSection } from './card-filter-section';
 import { DotPagination, DotPaginationOption } from './dot-pagination';
 import { CardStickyNavPortal } from './card-sticky-nav';
 
-
 const MOBILE_ITEMS_IN_VIEW = 1;
 const DESKTOP_ITEMS_IN_VIEW = 3;
 
@@ -31,10 +32,10 @@ export function CardCompareTable(): JSX.Element | null {
   // Items to actually display
   const itemState = useCompareItemDisplayState();
   const [isIntersecting, setIsIntersecting] = useState(false);
-  const [path, setPath] = useState(false);
+  const [path, setPath] = useState({vac:false,compare:false});
+ 
 
   const hideStickyNav = smallViewport ? false : isIntersecting;
-   
   const paginationOptions = useMemo(
     () => itemState.state.allItems.map((i): DotPaginationOption => ({ id: i.id, label: i.name })),
     [itemState.state.allItems]
@@ -61,8 +62,8 @@ export function CardCompareTable(): JSX.Element | null {
   );
 
   useEffect(() => {
-    let route = window.location.href;
-    if (route.slice(route.length - 9) == 'view.html') setPath(true);
+    if ( window.location.href.indexOf('view-all-cards')>-1 )setPath({...path,vac:true});
+    if ( window.location.href.indexOf('compare')>-1 )setPath({...path,compare:true});
   }, []);
 
   useEffect(() => {
@@ -83,18 +84,12 @@ export function CardCompareTable(): JSX.Element | null {
     (): CardDynamicData | null => itemState.state.subsetItems[activeItemIndex] || null,
     [itemState.state.subsetItems, activeItemIndex]
   );
-  
-
-  
 
   const titleId = `card-title=${activeItem?.id}`;
-  
 
   useEffect(() => {
     setActiveItemIndex(0);
   }, [itemState.state.subsetItems]);
-
-  
 
   const handlers = useSwipeable({
     onSwipedLeft: () => itemState.setNext(),
@@ -121,7 +116,7 @@ export function CardCompareTable(): JSX.Element | null {
 
   return (
     <div className="card-compare-table body-3" {...handlers}>
-      {path ? (
+      {path.vac ? (
         <div>
           <CardFilterSection
             className=""
@@ -132,8 +127,18 @@ export function CardCompareTable(): JSX.Element | null {
             setActiveItemIndex={setActiveItemIndex}
             activeItemIndex={activeItemIndex}
             smallViewport={smallViewport}
+            
           ></CardFilterSection>
         </div>
+      ) :path.compare? (
+        
+    
+         <Compare 
+          itemState={itemState}
+>
+          </Compare>
+          
+       
       ) : activeItem ? (
         <div>
           <IntersectionHelper onIntersectChange={(intersecting) => setIsIntersecting(intersecting)}>
@@ -219,7 +224,7 @@ export function CardCompareTable(): JSX.Element | null {
                       className={cx('text-align-center legal-1')}
                     >
                       <p class="body-3 margin-1-tb">
-                        <strong>${activeItem.annualFee}</strong> Annual Fee
+                      {activeItem.annualFeeString ? <RawHtml tagName="span" html={activeItem.annualFeeString} /> : <span><strong>${activeItem.annualFee}</strong> Annual Fee</span>}
                         {typeof activeItem.annualFeeSymbols === 'string' &&
                         activeItem.annualFeeSymbols.length > 0 ? (
                           <sup>{activeItem.annualFeeSymbols}</sup>
@@ -227,6 +232,9 @@ export function CardCompareTable(): JSX.Element | null {
                       </p>
                       {activeItem.annualFeeSubtext && (
                         <RawHtml tagName="p" html={activeItem.annualFeeSubtext} />
+                      )}
+                      {activeItem.aprText && (
+                        <RawHtml tagName="p" className="dynamicAPR" html={activeItem.aprText} />
                       )}
                       <p class="margin-1-t">
                         <a class="btn btn-sm" href={activeItem.applyUrl || activeItem.url}>
@@ -252,6 +260,13 @@ export function CardCompareTable(): JSX.Element | null {
                           <sup>¤</sup>Rates &amp; Fees
                         </a>
                       </p>
+                      {activeItem.learnMoreUrl && (
+                      <p class="legal-1 margin-1-t">
+                        <a
+                          href={activeItem.learnMoreUrl}
+                        >Learn More
+                        </a>
+                      </p>)}
                     </div>
                   </div>
                 </div>
@@ -274,23 +289,39 @@ export function CardCompareTable(): JSX.Element | null {
                     <ul id="option-category-input">
                       <li
                         className="container-option"
-                        onClick={() => navigateToUrl('low-funnel-view.html')}
+                        onClick={() => navigateToUrl('view-all-cards')}
                       >
                         <label>
                           <input
                             type="radio"
                             name="card-category-input-selector"
-                            id="card-category-input-selector-5"
+                            id="card-category-input-selector-6"
                             className="visually-hidden"
-                            value="no-fee"
+                            value="view-all-cards"
                           />
-                          {/* <div className="dls-bright-blue icon icon-sm icon-hover dls-icon-no-fee"></div> */}
                           <div className="dls-bright-blue margin-1-l option-text">
                             View All Cards
                           </div>
                         </label>
                       </li>
-                      <li className="container-option" onClick={() => navigateToUrl('best')}>
+                      <li
+                        className="container-option"
+                        onClick={() => navigateToUrl('compare')}
+                      >
+                        <label>
+                          <input
+                            type="radio"
+                            name="card-category-input-selector"
+                            id="card-category-input-selector-7"
+                            className="visually-hidden"
+                            value="compare"
+                          />
+                          <div className="dls-bright-blue margin-1-l option-text">
+                            Compare
+                          </div>
+                        </label>
+                      </li>
+                      <li className="container-option" onClick={() => navigateToUrl('core')}>
                         <label>
                           <input
                             type="radio"
@@ -410,7 +441,7 @@ export function CardCompareTable(): JSX.Element | null {
                         className={cx('text-align-center legal-1')}
                       >
                         <p class="label-2 font-weight-normal margin-1-tb">
-                          <strong>${item.annualFee}</strong> Annual Fee
+                        {item.annualFeeString ? <RawHtml tagName="span" html={item.annualFeeString} /> : <span><strong>${item.annualFee}</strong> Annual Fee</span>}
                           {typeof item.annualFeeSymbols === 'string' &&
                           item.annualFeeSymbols.length > 0 ? (
                             <sup>{item.annualFeeSymbols}</sup>
@@ -564,7 +595,7 @@ export function CardCompareTable(): JSX.Element | null {
             sectionTitle={<p className="heading-5">Card Benefits & Features</p>}
             className="border-t"
           >
-            <div className="row flex-justify-center card-compare-content-node-container">
+            <div className="row flex-justify-center card-compare-content-node-container" id="cardBenefitsAndFeatures">
               {itemState.state.subsetItems.map((item) => (
                 <div
                   key={item.id}
@@ -582,5 +613,6 @@ export function CardCompareTable(): JSX.Element | null {
         </div>
       ) : null}
     </div>
+
   );
 }

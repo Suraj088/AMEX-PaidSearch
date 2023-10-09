@@ -8,6 +8,7 @@
 @use './styles/blocks/card-comparison';
 @use './styles/blocks/terms-and-conditions';
 @use './styles/blocks/_vcp';
+@use './styles/blocks/_cc';
 .visually-hidden {
   @include a11y.visually-hidden();
 }

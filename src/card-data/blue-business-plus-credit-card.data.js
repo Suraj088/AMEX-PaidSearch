@@ -13,13 +13,16 @@ module.exports = () => {
     image: `https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/blue-business-plus.png`,
     annualFee: 0,
     NoAnnualFee:true,
+    aprText: ' ',
+    learnMoreUrl: `#cardBenefitsAndFeatures`,
     membershipRewards:true,
+    Best:true,
     annualFeeSymbols: '¤',
     offerAndBenefitTermsUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/bluebusinessplus-credit-card/30214-9-0?key=tncBody&rwdFlag=rwd#offer-terms`,
     ratesAndFeesUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/bluebusinessplus-credit-card/30214-9-0?key=tncBody&rwdFlag=rwd`,
-    quickCompareImage: 'assets/lifestyle-blue-business-plus-credit-card-1635749061.png',
+    quickCompareImage: 'assets/BB+_Hero.png',
     quickCompareColor: '#F7F3F0',
-    quickCompare: [
+    vacPopOut: [
       {
         kind: 'heading-5',
         content: 'A simple solution that’s anything but&nbsp;basic',
@@ -28,7 +31,7 @@ module.exports = () => {
       {
         kind: 'p',
         content:
-          'Earn <span class="heading-4 font-weight-bold">15,000</span> Membership Rewards<sup>®</sup> points after you spend $3,000 in eligible purchases on the Card within the first 3 months of Card&nbsp;Membership.<sup>†</sup>',
+          'Enjoy a <b>Low Intro APR</b>, and <b>no annual fee</b>.<sup>¤</sup>',
       },
       {
         kind: 'heading-4',
@@ -38,8 +41,33 @@ module.exports = () => {
       {
         kind: 'ul',
         content: [
-          '<strong>2X points</strong> on the first $50,000 spent on purchases per&nbsp;year<sup>‡</sup>',
-          '<strong>1X points</strong> on purchases&nbsp;thereafter<sup>‡</sup>',
+          '<strong>2X Membership Rewards<sup>®</sup> points</strong> on the first $50,000 spent on purchases per&nbsp;year<sup>‡</sup>',
+          '<strong>1X Membership Rewards<sup>®</sup> points</strong> on purchases&nbsp;thereafter<sup>‡</sup>',
+          'No annual fee<sup>¤</sup>',
+        ],
+      },
+    ],
+    quickCompare: [
+      {
+        kind: 'heading-5',
+        content: 'A simple solution that’s anything but&nbsp;basic',
+        extraClasses: 'font-weight-bold',
+      },
+      {
+        kind: 'p',
+        content:
+          'Enjoy a <b>Low Intro APR</b>, and <b>no annual fee</b>.<sup>¤</sup>',
+      },
+      {
+        kind: 'heading-4',
+        content: 'Great For:',
+        extraClasses: 'font-weight-bold',
+      },
+      {
+        kind: 'ul',
+        content: [
+          '<strong>2X Membership Rewards<sup>®</sup> points</strong> on the first $50,000 spent on purchases per&nbsp;year<sup>‡</sup>',
+          '<strong>1X Membership Rewards<sup>®</sup> points</strong> on purchases&nbsp;thereafter<sup>‡</sup>',
           'No annual fee<sup>¤</sup>',
         ],
       },
@@ -49,11 +77,11 @@ module.exports = () => {
     greatFor: [
       {
         iconKey: 'point-2x',
-        label: `<strong>2X points</strong> on the first $50,000 spent on purchases per year<sup>‡</sup>`,
+        label: `<strong>2X Membership Rewards<sup>®</sup> points</strong> on the first $50,000 spent on purchases per year<sup>‡</sup>`,
       },
       {
         iconKey: 'recent-points',
-        label: `<strong>1X points</strong> on purchases thereafter<sup>‡</sup>`,
+        label: `<strong>1X Membership Rewards<sup>®</sup> points</strong> on purchases thereafter<sup>‡</sup>`,
       },
       {
         iconKey: 'no-fee',
@@ -63,12 +91,8 @@ module.exports = () => {
     welcomeOffer: [
       {
         kind: 'heading-4',
-        content: `Earn <span class="display-block heading-5 font-weight-bold margin-0">15,000</span>`,
-      },
-      {
-        kind: 'p',
-        content: `Membership Rewards<sup>®</sup> points after you spend $3,000 in eligible purchases on your Card in the first 3&nbsp;months.<sup>†</sup>`,
-      },
+        content: `Enjoy a <b>Low Intro APR</b>, and <b>no annual fee</b>.<sup>¤</sup>`,
+      }
     ],
     earningRewards: [
       {
@@ -86,7 +110,7 @@ module.exports = () => {
       },
       {
         kind: 'p',
-        content: `<strong>1X</strong> all eligible purchases after`,
+        content: `<strong>1X</strong> all eligible purchases after<sup>‡</sup>`,
       },
     ],
     moreBenefits: [
@@ -96,7 +120,7 @@ module.exports = () => {
       },
       {
         kind: 'p',
-        content: `Expanded Buying Power gives you the freedom to spend beyond your credit limit and help get business done. While the amount you can spend above your credit limit isn't unlimited, it adjusts with your use of the Card, your payment history, credit record, financial resources known to us and other factors.<sup>‡</sup>`,
+        content: `Expanded Buying Power gives you the freedom to spend beyond your credit limit and help get business done. <i>The amount you can spend above your credit limit is not unlimited. It adjusts with your use of the Card, your payment history, credit record, financial resources known to us, and other factors.<sup>‡</sup></i>`,
       },
       {
         kind: 'heading-3',
@@ -104,7 +128,7 @@ module.exports = () => {
       },
       {
         kind: 'p',
-        content: `Take advantage of Vendor Pay by Bill.com by enrolling your Card. With the Basic plan, there is no monthly fee for the first user. Additional fees may apply based on plan type and number of users.<sup>‡</sup>`,
+        content: `Take advantage of Vendor Pay by Bill.com by enrolling your Card. With the Basic plan, there is no monthly fee for the first user and no fee for a second user for six months. After six months, the second user will have a fee of $15 per month. Additional fees may apply based on plan type and number of users.<sup>‡</sup>`,
       },
       {
         kind: 'heading-3',

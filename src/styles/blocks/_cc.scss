@@ -1,0 +1,100 @@
+
+  .cc-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cc-heading>h1{
+    margin: 30px 0px;
+  }
+
+  .card-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+   
+  }
+  
+  .card-section > div {
+    text-align: center;
+    margin: 10px;
+    position: relative; /* Add relative positioning to the divs */
+    width: 120px; /* Set a fixed width for each card */
+    height: 100px; /* Set a fixed height for each card */
+  }
+  
+  .card-section img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    position: absolute; /* Add absolute positioning to the images */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+    min-width: 80px; /* Adjust this value as needed */
+  min-height: 50px;
+  }
+  
+  
+  .close-button{
+    color: #006fcf;
+  border: 1px solid #006fcf;
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  border-radius: 100%;
+  line-height: 10px;
+  font-weight: 800;
+  
+  /* Position the close button in the top-right corner of the card */
+  position: absolute;
+  right: 0px; /* Adjust this value to control horizontal position */
+  top: 0px; /* Adjust this value to control vertical position */
+  }
+
+
+  .highlight{
+    cursor:pointer;
+  }
+
+  .highlighted {
+    background-color: #e5f0fa /* Change the background color when highlighted */
+  }
+  /* Add more styles for your comparison view as needed */
+  
+  .addCard{
+    display: flex;
+    justify-content: center;
+  }
+
+  .addCard>span{
+    margin-left: 10px;
+  }
+
+ .compare-btn{
+  padding: 10px 20px;
+  background-color: #006fcf;
+  color: #fff;
+  border-radius: 6px;
+ }
+
+ .cc-container>div{
+  display:flex;
+ }
+
+ .cc-container>div>h2{
+  padding: 30px;
+  margin-right: 30px;
+ }
+
+ .cc-cardcontainer{
+  display: none;
+ }

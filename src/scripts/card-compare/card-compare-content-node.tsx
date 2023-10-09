@@ -36,8 +36,7 @@ function CardCompareContentParagraph(props: RenderableProps<{ node: CardDynamicC
   const { content, extraClasses, id } = props.node;
   const[path,setPath]=useState(false)
   useEffect(() => {
-    let route = window.location.href;
-    if (route.slice(route.length - 9) == 'view.html') setPath(true);
+    if ( window.location.href.indexOf('view-all-cards')>-1 )setPath(true);
   }, []);
   if(content=='<a href="#business-platinum-card-more-benefits-status-boost" rel="noopener noreferrer">View details</a>' && path){
      return <a/>
@@ -56,8 +55,7 @@ function CardCompareContentList(props: RenderableProps<{ node: CardDynamicConten
   let { content, extraClasses, id } = props.node;
   const[path,setPath]=useState(false)
   useEffect(() => {
-    let route = window.location.href;
-    if (route.slice(route.length - 9) == 'view.html') setPath(true);
+    if ( window.location.href.indexOf('view-all-cards')>-1 )setPath(true);
   }, []);
  if(path && content[2]=='<strong>Unlock over $1,400</strong> per year in value with your Business Platinum Card for statement credits on select purchases, including tech, recruiting, travel and more. Enrollment required. <a href="#business-platinum-card-more-benefits-status-boost" rel="noopener noreferrer">Learn more</a>.<sup>‡</sup><br />'){
  let element=content[2].replace('<a href="#business-platinum-card-more-benefits-status-boost" rel="noopener noreferrer">Learn more</a>.<sup>‡</sup><br />',"")

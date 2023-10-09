@@ -12,14 +12,16 @@ module.exports = () => {
     applyUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/bluebusinesscash-credit-card/30214-9-0?intlink=US-Acq-NonBrandSearch-BlueBusinessCashCard-Apply-BlueBusinessCash`,
     image: `https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/blue-business-cash.png`,
     annualFee: 0,
+    aprText:' ',
+    learnMoreUrl: `#cardBenefitsAndFeatures`,
     NoAnnualFee:true,
     CashBack:true,
     annualFeeSymbols: '¤',
     offerAndBenefitTermsUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/bluebusinesscash-credit-card/30214-9-0?key=tncBody&rwdFlag=rwd#offer-terms`,
     ratesAndFeesUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/bluebusinesscash-credit-card/30214-9-0?key=tncBody&rwdFlag=rwd`,
-    quickCompareImage: 'assets/lifestyle-blue-business-cash-card-1635749061.png',
+    quickCompareImage: 'assets/BBC_Hero.png',
     quickCompareColor: '#E9F1F0',
-    quickCompare: [
+    vacPopOut: [
       {
         kind: 'heading-5',
         content: 'Cash back to your business, so you can get back to&nbsp;business',
@@ -28,7 +30,7 @@ module.exports = () => {
       {
         kind: 'p',
         content:
-          'Earn a <span class="heading-4 font-weight-bold">$250</span> statement credit after you make $3,000 in purchases on your Card in your first 3 months.<sup>‡</sup>',
+          'Enjoy a <b>Low Intro APR</b>, and <b>no annual fee</b>.<sup>¤</sup>',
       },
       {
         kind: 'heading-4',
@@ -38,9 +40,34 @@ module.exports = () => {
       {
         kind: 'ul',
         content: [
-          '<strong>2% cash back</strong> on all eligible purchases up to $50,000 per calendar&nbsp;year<sup>‡</sup>',
+          '<strong>2% cash back</strong> on all eligible purchases on up to $50,000 per calendar year<sup>‡</sup>',
           '<strong>1% cash back</strong> on all eligible purchases thereafter.<sup>‡</sup> Cash back earned is automatically credited to your&nbsp;statement.',
-          'No annual fee,<sup>¤</sup> ever',
+          'No annual fee<sup>¤</sup>',
+        ],
+      },
+    ],
+    quickCompare: [
+      {
+        kind: 'heading-5',
+        content: 'Cash back to your business, so you can get back to&nbsp;business',
+        extraClasses: 'font-weight-bold',
+      },
+      {
+        kind: 'p',
+        content:
+          'Enjoy a <b>Low Intro APR</b>, and <b>no annual fee</b>.<sup>¤</sup>',
+      },
+      {
+        kind: 'heading-4',
+        content: 'Great For:',
+        extraClasses: 'font-weight-bold',
+      },
+      {
+        kind: 'ul',
+        content: [
+          '<strong>2% cash back</strong> on all eligible purchases on up to $50,000 per calendar year<sup>‡</sup>',
+          '<strong>1% cash back</strong> on all eligible purchases thereafter.<sup>‡</sup> Cash back earned is automatically credited to your&nbsp;statement.',
+          'No annual fee<sup>¤</sup>',
         ],
       },
     ],
@@ -48,7 +75,7 @@ module.exports = () => {
     greatFor: [
       {
         iconKey: 'cashback',
-        label: `<strong>2% cash back</strong> on all eligible purchases up to $50,000 per calendar year<sup>‡</sup>`,
+        label: `<strong>2% cash back</strong> on all eligible purchases on up to $50,000 per calendar year<sup>‡</sup>`,
       },
       {
         iconKey: 'cashback',
@@ -56,17 +83,13 @@ module.exports = () => {
       },
       {
         iconKey: 'no-fee',
-        label: `No Annual Fee,<sup>¤</sup> ever`,
+        label: `No Annual Fee<sup>¤</sup>`,
       },
     ],
     welcomeOffer: [
       {
         kind: 'heading-4',
-        content: `Earn a <span class="display-block heading-5 font-weight-bold margin-0">$250</span>`,
-      },
-      {
-        kind: 'p',
-        content: `statement credit after you make $3,000 in purchases on your Card in your first 3&nbsp;months.<sup>‡</sup>`,
+        content: `Enjoy a <b>Low Intro APR</b>, and <b>no annual fee</b>.<sup>¤</sup>`,
       },
     ],
     earningRewards: [
@@ -99,15 +122,15 @@ module.exports = () => {
       },
       {
         kind: 'p',
-        content: `Expanded Buying Power<sup>‡</sup> gives you the freedom to spend beyond your credit limit and get business done. Just remember, the amount you can spend above your credit limit is not unlimited. It adjusts with your use of the Card, your payment history, credit record, financial resources known to us and other factors.`,
+        content: `Expanded Buying Power<sup>‡</sup> gives you the freedom to spend beyond your credit limit and get business done. <i>Just remember, the amount you can spend above your credit limit is not unlimited. It adjusts with your use of the Card, your payment history, credit record, financial resources known to us and other factors.</i>`,
       },
       {
         kind: 'heading-3',
-        content: `Connect to QuickBooks`,
+        content: `Connect to QuickBooks<sup>®</sup>`,
       },
       {
         kind: 'p',
-        content: `Save time with auto-expense categorization in QuickBooks- Once enrolled, your Business Card transactions are automatically tagged with your QuickBooks categories.<sup>‡</sup>`,
+        content: `Save time with auto-expense categorization in Intuit QuickBooks- Once enrolled, your Business Card transactions are automatically tagged with your QuickBooks categories.<sup>‡</sup>`,
       },
       {
         kind: 'heading-3',
@@ -115,7 +138,7 @@ module.exports = () => {
       },
       {
         kind: 'p',
-        content: `Take advantage of Vendor Pay by Bill.com by enrolling your Card. With the Basic plan, there is no monthly fee for the first user. Additional fees may apply based on plan type and number of users.<sup>‡</sup>`,
+        content: `Take advantage of Vendor Pay by Bill.com by enrolling your Card. With the Basic plan, there is no monthly fee for the first user and no fee for a second user for six months. After six months, the second user will have a fee of $15 per month. Additional fees may apply based on plan type and number of users.<sup>‡</sup>`,
       },
     ],
   };

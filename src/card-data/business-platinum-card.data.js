@@ -16,19 +16,21 @@
     applyUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/business-platinum-charge-card/30214-9-0?intlink=US-Acq-NonBrandSearch-PlatinumCard-Apply-Platinum`,
     image: `assets/card-art-business-platinum-1624478767.png`,
     annualFee: 695,
+    aprText:' ',
     membershipRewards:true,
     Dining:true,
     Retail:true,
     Technology:true,
+    Best:true,
     Travel:true,
     Supplies:true,
     annualFeeSymbols: '¤',
     annualFeeSubtext: '',
     offerAndBenefitTermsUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/business-platinum-charge-card/30214-9-0?key=tncBody&rwdFlag=rwd#offer-terms`,
     ratesAndFeesUrl,
-    quickCompareImage: 'assets/lifestyle-business-platinum-card-1635749061.png',
+    quickCompareImage: 'assets/BPlat_Hero.png',
     quickCompareColor: '#F0F5F6',
-    quickCompare: [
+    vacPopOut: [
       {
         kind: 'heading-5',
         content: 'The Card built for going places can take your business further',
@@ -40,9 +42,41 @@
           'Earn <span class="heading-4 font-weight-bold">120,000</span> Membership Rewards<sup>®</sup> points after you spend $15,000 on eligible purchases with the Business Platinum Card within the first 3 months of Card&nbsp;Membership.<sup>†</sup>',
       },
       {
+        kind: 'heading-4',
+        content: 'Great For:',
+        extraClasses: 'font-weight-bold',
+      },
+      {
+        kind: 'ul',
+        content: [
+          'Earn <strong>1.5X points</strong> points on eligible purchases at US electronic goods retailers, software and cloud systems providers, and electronic goods and software providers. Terms and points cap applies.<sup>‡</sup>',
+          'Complimentary access to 1,400+ American Express Global Lounge Collection<sup>®</sup> airport lounges worldwide.<sup>‡</sup>',
+          `<strong>Unlock over $1,400</strong> per year in value with the Business Platinum Card<sup>®</sup> for statement credits on select purchases, including tech, recruiting, travel and more. Enrollment required. <a href="#${modeBenefitsIdAttr}" rel="noopener noreferrer">Learn more</a>.<sup>‡</sup> Benefits include:
+          <ul>
+          <li>Business Platinum Dell Technologies Benefit</li>
+          <li>Business Platinum Indeed Benefit</li>
+          <li>$200 Airline Fee Credit</li>
+          <li>$179 CLEAR Credit</li>
+          <li>Business Platinum Adobe Benefit</li>
+          <li>Wireless Credit</li>
+          </ul>`,
+        ],
+      },
+      {
+        kind: 'p',
+        content: `<a href="#${modeBenefitsIdAttr}" rel="noopener noreferrer">View details</a>`,
+      },
+    ],
+    quickCompare: [
+      {
+        kind: 'heading-5',
+        content: 'The Card built for going places can take your business further',
+        extraClasses: 'font-weight-bold',
+      },
+      {
         kind: 'p',
         content:
-          'Plus, 0% Intro APR for 12 months from the date of the account opening on purchases eligible for Pay Over Time. After that, your APR will be 15.74% to 23.74% based on your credit worthiness and other factors as determined at the time of account opening.',
+          'Earn <span class="heading-4 font-weight-bold">120,000</span> Membership Rewards<sup>®</sup> points after you spend $15,000 on eligible purchases with the Business Platinum Card within the first 3 months of Card&nbsp;Membership.<sup>†</sup>',
       },
       {
         kind: 'heading-4',
@@ -86,15 +120,6 @@
         kind: 'p',
         content: `Membership Rewards<sup>®</sup> points after you spend $15,000 on eligible purchases with the Business Platinum Card within the first 3 months of Card Membership.<sup>†</sup>`,
       },
-      {
-        kind: 'p',
-        content: `Plus, 0% Intro APR for 12 months from the date of the account opening on purchases eligible for Pay Over Time. After that, your APR will be 15.74% to 23.74% based on your credit worthiness and other factors as determined at the time of account opening.`,
-      },
-      {
-        kind: 'p',
-        content: `<a href="${ratesAndFeesUrl}" target="_blank" rel="noreferrer noopener"><sup>¤</sup>Rates &amp; Fees</a>`,
-        extraClasses: 'legal-1 margin-1-t',
-      },
     ],
     earningRewards: [
       {
@@ -112,7 +137,7 @@
       },
       {
         kind: 'p',
-        content: `<strong>1.5X</strong> points for every dollar spent (an extra half point per dollar) on eligible purchases at US construction material and hardware suppliers, electronic goods retailers and software & cloud system providers, Shipping providers. Each eligible purchase of $5,000 or more everywhere else. Cap applies.<sup>‡</sup>`,
+        content: `<strong>1.5X</strong> points (that's an extra half point per dollar) on purchases at US construction material & hardware suppliers, electronic goods retailers and software & cloud system providers, and shipping providers, as well as on purchases of $5,000 or more everywhere else, up to $2 million of these purchases per calendar year.<sup>‡</sup>`,
       },
       {
         kind: 'p',
@@ -122,33 +147,33 @@
     moreBenefits: [
       {
         kind: 'heading-3',
-        content: `Business  Platinum  Dell  Technologies Benefit`,
+        content: `Business Platinum Dell Technologies Benefit`,
         id: modeBenefitsIdAttr,
       },
       {
         kind: 'p',
-        content: `Enroll  and get  up to  $400 in  statement credits  per  year toward  U.S. purchases with Dell  Technologies  on  the Business  Platinum Card. That’s up to $200 back semi-annually.`,
+        content: `Get up to $200 in statement credits semi-annually toward U.S. purchases with Dell Technologies on the Business Platinum Card. That's up to $400 back per year. Enrollment required.`,
       },
       {
         kind: 'heading-3',
-        content: `Business  Platinum  Adobe  Benefit`,
+        content: `Business Platinum Adobe Benefit`,
       },
       {
         kind: 'p',
-        content: `Get  up  to $150 in  statement  credits  per  year for  purchases  with  Adobe  on  annual prepaid  plans  for  eligible  Creative  Cloud  for  teams and  Acrobat  Pro  DC  with  e-sign  for teams on  the  Business  Platinum  Card. Enrollment  required.<sup>[1]</sup>`,
+        content: `Get up to $150 in statement credits per year for eligible annual prepaid business plan purchases with Adobe on Creative Cloud for teams or Acrobat Pro DC with e-sign for teams on the Business Platinum Card. Enrollment required.<sup>[1]</sup>`,
       },
       {
         kind: 'p',
-        content: `[1] Annual  prepaid  plans  automatically  renew  each  year on your  annual  subscription date  until  cancelled.`,
+        content: `[1] Annual prepaid business plans automatically renew each year on your annual subscription date until cancelled.<sup>‡</sup>`,
         extraClasses: 'legal-1',
       },
       {
         kind: 'heading-3',
-        content: `Business  Platinum  Indeed  Benefit`,
+        content: `Business Platinum Indeed Benefit`,
       },
       {
         kind: 'p',
-        content: `Enroll  and get  up to  $360 in  statement credits  per  year for  purchases  with  Indeed on the Business Platinum Card. That’s up to $90 back per quarter.`,
+        content: `Get up to $90 in statement credits quarterly for purchases with Indeed on the Business Platinum Card. That's up to $360 back per year. Enrollment required.`,
       },
       {
         kind: 'heading-3',
@@ -156,7 +181,7 @@
       },
       {
         kind: 'p',
-        content: `Get up to $120 in statement credits per year for wireless telephone service purchases made directly with a wireless provider in the U.S. on the Business Platinum Card. That’s up to $10 back per month. Enrollment required.`,
+        content: `Enroll and get up to $120 in statement credits per year (up to $10 back per month) for wireless telephone service purchases made directly with a wireless provider in the U.S. on the Business Platinum Card.`,
       },
       {
         kind: 'heading-3',
@@ -164,26 +189,18 @@
       },
       {
         kind: 'p',
-        content: `Select one qualifying airline and then receive up to $200 in statement credits per calendar year when incidental fees are charged by the airline to your Card or any of the Additional Cards on your Platinum Card account.<sup>[1]</sup>`,
+        content: `Select one qualifying airline and then receive up to $200 in statement credits per calendar year when incidental fees, such as checked bags and in flight refreshments, are charged by the airline to your Business Platinum Card account.<sup>[1]</sup>`,
       },
       {
         kind: 'p',
         content: `[1] American Express relies on accurate airline transaction data to identify incidental fee purchases. If you do not see a credit for a qualifying incidental purchase on your eligible Card after 4 weeks, simply call the number on the back of your Card. See terms & conditions for more details.`,
         extraClasses: 'legal-1',
       },
-      {
-        kind: 'heading-3',
-        content: `Annual Percentage Rate (APR) for Pay Over Time Feature`,
-      },
-      {
-        kind: 'p',
-        content: `Plus, 0% Intro APR for 12 months from the date of the account opening on purchases eligible for Pay Over Time. After that, your APR will be 15.74% to 23.74% based on your credit worthiness and other factors as determined at the time of account opening.`,
-      },
-      {
-        kind: 'p',
-        content: `<a href="${ratesAndFeesUrl}" target="_blank" rel="noreferrer noopener"><sup>¤</sup>Rates &amp; Fees</a>`,
-        extraClasses: 'legal-1 margin-1-t',
-      },
+      // {
+      //   kind: 'p',
+      //   content: `<a href="${ratesAndFeesUrl}" target="_blank" rel="noreferrer noopener"><sup>¤</sup>Rates &amp; Fees</a>`,
+      //   extraClasses: 'legal-1 margin-1-t',
+      // },
       {
         kind: 'heading-3',
         content: `Pay Over Time Option<sup>‡</sup>`,
@@ -213,7 +230,7 @@
       },
       {
         kind: 'p',
-        content: `CLEAR<sup>®</sup> uses biometrics to assign you a touchless ID, allowing you to move faster through security at selected airports and stadiums across the U.S. You can cover the cost of a CLEAR membership with up to $189 in statement credits per year after you pay for CLEAR with your Business Platinum Card.<sup>‡</sup>`,
+        content: `CLEAR<sup>®</sup> uses unique attributes, such as eyes or fingerprints, to digitally verify identity to help its members move faster through security at select airports, stadiums, and entertainment venues nationwide. You can cover the cost of a CLEAR membership with up to $189 in statement credits per year after you pay for CLEAR with your Business Platinum Card.<sup>‡</sup>`,
       },
       {
         kind: 'heading-3',
@@ -230,11 +247,11 @@
       },
       {
         kind: 'heading-3',
-        content: `The Global Lounge Collection`,
+        content: `American Express Global Lounge Collection<sup>®</sup>`,
       },
       {
         kind: 'p',
-        content: `The American Express Global Lounge Collection<sup>®</sup> can provide an escape at the airport. With more than 1,400 airport lounges across 650 cities and counting, you have more lounge location options than any other credit card on the market<sup>[1]</sup>.<sup>‡</sup>`,
+        content: `Get complimentary access to the American Express Global Lounge Collection®  with your Card. With more than 1,400 airport lounges across 650 cities and counting, you have more lounge location options than any other credit card on the market<sup>[1]</sup>.<sup>‡</sup> Visit <a href="http://www.americanexpress.com/findalounge#/loungefinder">http://www.americanexpress.com/findalounge#/loungefinder</a> for more information`,
       },
       {
         kind: 'p',

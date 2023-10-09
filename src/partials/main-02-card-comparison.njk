@@ -1,53 +1,53 @@
-<section class="block--card-comparison margin-1-t margin-7-b border-t">
+    <section class="block--card-comparison margin-1-t margin-7-b border-t">
 
-  <!-- prettier-ignore -->
-  <div id="data-container-initial" hidden>
-  {%- for category in cardCategories %}
-    {%- if category.key === defaultCardCategory  %}
-      {%- for card in category.cards %}
-        {%- if singleCardId %}
-          {%- if singleCardId === card.id %}
-          <script type="application/json" data-card="{{ card.id }}" data-category="{{ category.key }}">
-          {{ card | dump | safe }}
-          </script>
-          {%- endif %}
-        {%- else %}
-          <script type="application/json" data-card="{{ card.id }}" data-category="{{ category.key }}">
-          {{ card | dump | safe }}
-          </script>
+      <!-- prettier-ignore -->
+      <div id="data-container-initial" hidden>
+      {%- for category in cardCategories %}
+        {%- if category.key === defaultCardCategory  %}
+          {%- for card in category.cards %}
+            {%- if singleCardId %}
+              {%- if singleCardId === card.id %}
+              <script type="application/json" data-card="{{ card.id }}" data-category="{{ category.key }}">
+              {{ card | dump | safe }}
+              </script>
+              {%- endif %}
+            {%- else %}
+              <script type="application/json" data-card="{{ card.id }}" data-category="{{ category.key }}">
+              {{ card | dump | safe }}
+              </script>
+            {%- endif %}
+          {%- endfor %}
         {%- endif %}
       {%- endfor %}
-    {%- endif %}
-  {%- endfor %}
-  </div>
+      </div>
 
-  <div id="data-container" hidden></div>
+      <div id="data-container" hidden></div>
 
-  <div id="card-compare-table-root" class="card-compare-table-root">
-    <div class="flex flex-align-center flex-justify-center margin-5-tb">
-      <div
-        role="progressbar"
-        aria-valuemin="0"
-        aria-valuemax="100"
-        class="progress-circle progress-indeterminate progress-lg margin-5-tb"
-      ></div>
-    </div>
-  </div>
+      <div id="card-compare-table-root" class="card-compare-table-root">
+        <div class="flex flex-align-center flex-justify-center margin-5-tb">
+          <div
+            role="progressbar"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            class="progress-circle progress-indeterminate progress-lg margin-5-tb"
+          ></div>
+        </div>
+      </div>
 
-  {%- if constants.DENTSU_IS_DEMO %}
-  <!-- [START] CODE FOR DEMO PURPOSES! REMOVE AT WILL -->
-  <script id="dentsu-demo-script" type="module">
-    const demoDataContainer = document.getElementById('data-container');
-    const demoDataContainerInitial = document.getElementById('data-container-initial');
+      {%- if constants.DENTSU_IS_DEMO %}
+      <!-- [START] CODE FOR DEMO PURPOSES! REMOVE AT WILL -->
+      <script id="dentsu-demo-script" type="module">
+        const demoDataContainer = document.getElementById('data-container');
+        const demoDataContainerInitial = document.getElementById('data-container-initial');
 
-    if (demoDataContainer || demoDataContainerInitial) {
-      while (demoDataContainerInitial.hasChildNodes()) {
-        demoDataContainer.appendChild(
-          demoDataContainerInitial.removeChild(demoDataContainerInitial.firstChild)
-        );
-      }
-    }
-  </script>
-  <!-- [END] CODE FOR DEMO PURPOSES! REMOVE AT WILL -->
-  {%- endif %}
-</section>
+        if (demoDataContainer || demoDataContainerInitial) {
+          while (demoDataContainerInitial.hasChildNodes()) {
+            demoDataContainer.appendChild(
+              demoDataContainerInitial.removeChild(demoDataContainerInitial.firstChild)
+            );
+          }
+        }
+      </script>
+      <!-- [END] CODE FOR DEMO PURPOSES! REMOVE AT WILL -->
+      {%- endif %}
+    </section>

@@ -1,33 +1,33 @@
-<section class="block--hero">
-  <div class="block--hero__main position-relative flex flex-justify-center">
-    <div
-      class="hero flex-inline flex-item-grow flex-align-center flex-justify-center text-align-left text-align-center-md-up dls-gray-06"
-    >
-      <div
-        class="block--hero__title-container pad-responsive-extra-lr pad-3-tb row fluid flex-justify-center"
-      >
-        <div class="col-sm-11 col-md-9 col-lg-9 stack">
-          {% if defaultCardCategory and hero[defaultCardCategory] %}
-          <h1 class="margin-0-tb">
-            <span class="heading-4">
-              {{ hero[defaultCardCategory].title | markdown | safe }}
-            </span>
-          </h1>
-          <p class="body-3 margin-1-t">
-            {{ hero[defaultCardCategory].subtitle | markdown | safe }}
-          </p>
-          {% else %}
-          <h1 class="margin-0-tb">
-            <span class="heading-4">
-              {{ hero.default.title | markdown | safe }}
-            </span>
-          </h1>
-          <p class="body-3 margin-1-t">
-            {{ hero.default.subtitle | markdown | safe }}
-          </p>
-          {% endif %}
+    <section class="block--hero">
+      <div class="block--hero__main position-relative flex flex-justify-center">
+        <div
+          class="hero flex-inline flex-item-grow flex-align-center flex-justify-center text-align-left text-align-center-md-up dls-gray-06"
+        >
+          <div
+            class="block--hero__title-container pad-responsive-extra-lr pad-3-tb row fluid flex-justify-center"
+          >
+            <div class="col-sm-11 col-md-9 col-lg-9 stack">
+              {% if defaultCardCategory and hero[defaultCardCategory] %}
+              <h1 class="margin-0-tb">
+                <span class="heading-4">
+                  {{ hero[defaultCardCategory].title | markdown | safe }}
+                </span>
+              </h1>
+              <p class="body-3 margin-1-t">
+                {{ hero[defaultCardCategory].subtitle | markdown | safe }}
+              </p>
+              {% else %}
+              <h1 class="margin-0-tb">
+                <span class="heading-4">
+                  {{ hero.default.title | markdown | safe }}
+                </span>
+              </h1>
+              <p class="body-3 margin-1-t">
+                {{ hero.default.subtitle | markdown | safe }}
+              </p>
+              {% endif %}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>

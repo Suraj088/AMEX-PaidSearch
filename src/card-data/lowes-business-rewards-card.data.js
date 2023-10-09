@@ -12,6 +12,7 @@ module.exports = () => {
     applyUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/lowes-business-rewards-card/30214-9-0?intlink=US-Acq-NonBrandSearch-LowesCard-Apply-Lowes`,
     image: `assets/card-art-lowes-business-rewards-1629090443.png`,
     annualFee: 0,
+    aprText:' ',
     NoAnnualFee:true,
     CashBack:true,
     Dining:true,
@@ -22,7 +23,7 @@ module.exports = () => {
     ratesAndFeesUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/lowes-business-rewards-card/30214-9-0?key=tncBody&rwdFlag=rwd`,
     quickCompareImage: 'assets/lifestyle-lowes-business-rewards-card-1635749061.png',
     quickCompareColor: '#E6EBEF',
-    quickCompare: [
+    vacPopOut: [
       {
         kind: 'heading-5',
         content: 'Hard work pays off with the Lowe’s Business Rewards&nbsp;Card',
@@ -31,12 +32,12 @@ module.exports = () => {
       {
         kind: 'p',
         content:
-          'Get <span class="heading-4 font-weight-bold">$100</span> back earned automatically as a statement credit upon Card approval. Plus, earn <span class="heading-4 font-weight-bold">5%</span> cash back at Lowe’s on eligible purchases made on your card at Lowe’s for the first 6&nbsp;months.<sup>†</sup>*',
+          'Get <span class="heading-4 font-weight-bold">$100</span> back in the form of a statement credit upon approval.<sup>†</sup> Plus, earn <span class="heading-4 font-weight-bold">5%</span> cash back on purchases at Lowe’s for the first 6 months. 2% back after. New accounts only.<sup>†*</sup>',
       },
       {
         kind: 'p',
         content:
-          '*Cash back is received in the form of Lowe’s Business Rewards points that can be redeemed for statement credits or Lowe’s gift cards. Offer available for new accounts&nbsp;only.',
+          '*Terms Apply. Cash back is received in the form of Lowe’s Business Rewards points that can be redeemed for statement credits or select gift cards.',
         extraClasses: 'legal-1',
       },
       {
@@ -49,7 +50,38 @@ module.exports = () => {
         content: [
           '<strong>5% cash back</strong> on purchases at Lowe’s for the first 6 months. 2% back after. New accounts only.<sup>‡</sup>',
           '<strong>2% cash back</strong> at U.S. restaurants, U.S. office supply stores, wireless telephone services purchased directly from U.S. service providers.',
-          '<strong>1% cash back</strong> on other eligible purchases. Terms Apply.<sup>‡</sup>',
+          '<strong>1% cash back</strong> on other eligible purchases.<sup>‡*</sup>',
+        ],
+      },
+    ],
+    quickCompare: [
+      {
+        kind: 'heading-5',
+        content: 'Hard work pays off with the Lowe’s Business Rewards&nbsp;Card',
+        extraClasses: 'font-weight-bold',
+      },
+      {
+        kind: 'p',
+        content:
+          'Get <span class="heading-4 font-weight-bold">$100</span> back in the form of a statement credit upon approval.<sup>†</sup> Plus, earn <span class="heading-4 font-weight-bold">5%</span> cash back on purchases at Lowe’s for the first 6 months. 2% back after. New accounts only.<sup>†*</sup>',
+      },
+      {
+        kind: 'p',
+        content:
+          '*Terms Apply. Cash back is received in the form of Lowe’s Business Rewards points that can be redeemed for statement credits or select gift cards.',
+        extraClasses: 'legal-1',
+      },
+      {
+        kind: 'heading-4',
+        content: 'Great For:',
+        extraClasses: 'font-weight-bold',
+      },
+      {
+        kind: 'ul',
+        content: [
+          '<strong>5% cash back</strong> on purchases at Lowe’s for the first 6 months. 2% back after. New accounts only.<sup>‡</sup>',
+          '<strong>2% cash back</strong> at U.S. restaurants, U.S. office supply stores, wireless telephone services purchased directly from U.S. service providers.',
+          '<strong>1% cash back</strong> on other eligible purchases.<sup>‡*</sup>',
         ],
       },
     ],
@@ -57,15 +89,15 @@ module.exports = () => {
     greatFor: [
       {
         iconKey: 'cashback',
-        label: `<strong>5% cash back</strong> on purchases at Lowe’s for the first 6 months. 2% back after. New accounts only.<sup>‡</sup>`,
+        label: `<strong>5% cash back</strong> on purchases at Lowe’s for the first 6 months. 2% back after. New accounts only.<sup>†</sup>`,
       },
       {
         iconKey: 'cashback',
-        label: `<strong>2% cash back</strong> at U.S. restaurants, U.S. office supply stores, wireless telephone services purchased directly from U.S. service providers.`,
+        label: `<strong>2% cash back</strong> at U.S. restaurants, U.S. office supply stores, wireless telephone services purchased directly from U.S. service providers.<sup>‡</sup>`,
       },
       {
         iconKey: 'cashback',
-        label: `<strong>1% cash back</strong> on other eligible purchases. Terms Apply.<sup>‡</sup>`,
+        label: `<strong>1% cash back</strong> on other eligible purchases.<sup>‡*</sup>`,
       },
     ],
     welcomeOffer: [
@@ -75,11 +107,11 @@ module.exports = () => {
       },
       {
         kind: 'p',
-        content: `<strong>Get $100 back</strong> earned automatically as a statement credit upon Card approval. <strong>Plus, earn 5% cash back</strong> at Lowe’s on eligible purchases made on your card at Lowe's for the first 6&nbsp;months.<sup>†</sup>*`,
+        content: `Get <span class="heading-4 font-weight-bold">$100</span> back in the form of a statement credit upon approval.<sup>†</sup> Plus, earn <span class="heading-4 font-weight-bold">5%</span> cash back on purchases at Lowe's for the first 6 months. 2% back after. New accounts only.<sup>†*</sup>`,
       },
       {
         kind: 'p',
-        content: `*Cash back is received in the form of Lowe's Business Rewards points that can be redeemed for statement credits or Lowe's gift cards. Offer available for new accounts only.`,
+        content: `*Terms Apply. Cash back is received in the form of Lowe’s Business Rewards points that can be redeemed for statement credits or select gift cards.`,
       },
     ],
     earningRewards: [
@@ -94,35 +126,35 @@ module.exports = () => {
       },
       {
         kind: 'p',
-        content: `<strong>5%</strong> cash back on purchases at Lowe’s during your first 6 months of Lowe’s Business Rewards Card Membership. New accounts only.`,
+        content: `<strong>5%</strong> cash back on purchases at Lowe’s during your first 6 months of Lowe’s Business Rewards Card Membership. New accounts only.<sup>†</sup>`,
       },
       {
         kind: 'p',
-        content: `<strong>2%</strong> at Lowe’s after the first 6 months<sup>‡</sup>`,
+        content: `<strong>2%</strong> cash back on purchases at Lowe’s after the first 6 months<sup>‡</sup>`,
       },
       {
         kind: 'p',
-        content: `<strong>2%</strong> at U.S. restaurants, U.S. office supply stores, wireless telephone services purchased directly from U.S. service providers<sup>‡</sup>`,
+        content: `<strong>2%</strong> cash back at U.S. restaurants, U.S. office supply stores, wireless telephone services purchased directly from U.S. service providers<sup>‡</sup>`,
       },
       {
         kind: 'p',
-        content: `<strong>1%</strong> on all other purchases<sup>‡</sup>`,
+        content: `<strong>1%</strong> cash back on all other eligible purchases<sup>‡</sup>`,
       },
       {
         kind: 'p',
-        content: `Terms Apply. Cash back is received in the form of Lowe’s Business Rewards points that can be redeemed for statement credits or Lowe’s gift cards.`,
+        content: `Terms Apply. Cash back is received in the form of Lowe’s Business Rewards points that can be redeemed for statement credits or select gift cards.`,
         extraClasses: 'legal-1',
       },
     ],
     moreBenefits: [
-      {
-        kind: 'heading-3',
-        content: `Lowe's ProServices`,
-      },
-      {
-        kind: 'p',
-        content: `Access benefits with Lowe's ProServices, including Discounted Delivery, Bulk Rate Pricing, and the Business Replenishment Program.`,
-      },
+      // {
+      //   kind: 'heading-3',
+      //   content: `Lowe's ProServices`,
+      // },
+      // {
+      //   kind: 'p',
+      //   content: `Access benefits with Lowe's ProServices, including Discounted Delivery, Bulk Rate Pricing, and the Business Replenishment Program.`,
+      // },
       {
         kind: 'heading-3',
         content: `Lowe’s 5% Discount`,
@@ -145,7 +177,7 @@ module.exports = () => {
       },
       {
         kind: 'p',
-        content: `Take advantage of Vendor Pay by Bill.com by enrolling your Card. With the Basic plan, there is no monthly fee for the first user. Additional fees may apply based on plan type and number of users.<sup>‡</sup>`,
+        content: `Take advantage of Vendor Pay by Bill.com by enrolling your Card. With the Basic plan, there is no monthly fee for the first user and no fee for a second user for six months. After six months, the second user will have a fee of $15 per month. Additional fees may apply based on plan type and number of users.<sup>‡</sup>`,
       },
     ],
   };

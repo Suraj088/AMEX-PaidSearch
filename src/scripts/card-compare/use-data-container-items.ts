@@ -13,6 +13,12 @@ export interface CardDynamicIconRowNode {
   label: string;
 }
 
+export interface CardDynamicHighLights {
+  payOverTime:string,
+  noPresetSpendingLimit:string,
+  
+}
+
 export interface CardDynamicData {
   id: string;
   name: string;
@@ -20,24 +26,29 @@ export interface CardDynamicData {
   pdpUrl: string | undefined;
   applyUrl: string | null;
   image: string;
-  annualFee: number | string;
-  NoAnnualFee:boolean;
-  membershipRewards:boolean;
-  CashBack:boolean;
-  Airline:boolean;
-  Hotel:boolean;
-  Dining:boolean;
-  Technology:boolean;
-  Gas:boolean;
-  BusinessServices:boolean;
-  Retail:boolean;
-  Travel:boolean;
-  Supplies:boolean;
-  Advertising:boolean;
-  Shipping:boolean;
+  annualFee?: number | string;
+  annualFeeString?: string;
+  aprText?: string | null;
+  vacPopOut: CardDynamicContentNode[];
+  NoAnnualFee?:boolean;
+  Best?:boolean;
+  membershipRewards?:boolean;
+  CashBack?:boolean;
+  Airline?:boolean;
+  Hotel?:boolean;
+  Dining?:boolean;
+  Technology?:boolean;
+  Gas?:boolean;
+  BusinessServices?:boolean;
+  Retail?:boolean;
+  Travel?:boolean;
+  Supplies?:boolean;
+  Advertising?:boolean;
+  Shipping?:boolean;
   annualFeeSymbols: string | null;
   annualFeeSubtext?: string;
   offerAndBenefitTermsUrl: string;
+  learnMoreUrl?: string;
   ratesAndFeesUrl: string;
   quickCompareImage: string;
   quickCompareColor?: string | null;
@@ -47,6 +58,7 @@ export interface CardDynamicData {
   welcomeOffer: CardDynamicContentNode[];
   earningRewards: CardDynamicContentNode[];
   moreBenefits: CardDynamicContentNode[];
+  highlights?:CardDynamicHighLights;
 }
 
 export function useDataContainerItems(): CardDynamicData[] {

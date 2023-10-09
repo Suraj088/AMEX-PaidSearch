@@ -3,6 +3,6 @@ module.exports = () => {
   
     return {
       ...lowFunnelData,
-      defaultCardCategory: 'view',
+      defaultCardCategory: 'view-all-cards',
     };
   };

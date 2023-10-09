@@ -11,8 +11,9 @@ domReady(() => {
     initCardCategoryListener({
       onRadioControlChange: ({ eventTarget }) => {
         const { checked, value } = eventTarget;
-        
+       
         if (checked) {
+         
           emitControlValueEvent(document.body, CARD_CATEGORY_CHANGE_EVENT, value);
         }
       },

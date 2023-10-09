@@ -12,6 +12,7 @@ module.exports = () => {
     applyUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/the-plum-card-business-charge-card/30214-9-0?intlink=US-Acq-NonBrandSearch-PlumCard-Apply-Plum`,
     image: `https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/plum.png`,
     annualFee: 250,
+    aprText:' ',
     CashBack:true,
     BusinessServices:true,
     annualFeeSymbols: '¤',
@@ -19,6 +20,29 @@ module.exports = () => {
     ratesAndFeesUrl: `https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/the-plum-card-business-charge-card/30214-9-0?key=tncBody&rwdFlag=rwd`,
     quickCompareImage: 'assets/lifestyle-plum-card-1635749061.png',
     quickCompareColor: '#F5F1EC',
+    vacPopOut: [
+      {
+        kind: 'heading-5',
+        content: 'Cash back or more time to pay—the choice is&nbsp;yours',
+        extraClasses: 'font-weight-bold',
+      },
+      {
+        kind: 'p',
+        content: 'Get built-in flexibility to help you manage your business cash flow',
+      },
+      {
+        kind: 'heading-4',
+        content: 'Great For:',
+        extraClasses: 'font-weight-bold',
+      },
+      {
+        kind: 'ul',
+        content: [
+          'Earn <strong>unlimited 1.5% cash back</strong> automatically when you pay in 10 days. No caps. No categories. No enrollment.<sup>‡</sup>',
+          `<strong>OR</strong> get up to <strong>60 days to pay without interest</strong>. Just pay the Minimum Due by your Payment Due date and take care of the rest when it's due.<sup>‡</sup>`,
+        ],
+      },
+    ],
     quickCompare: [
       {
         kind: 'heading-5',
@@ -38,7 +62,7 @@ module.exports = () => {
         kind: 'ul',
         content: [
           'Earn <strong>unlimited 1.5% cash back</strong> automatically when you pay in 10 days. No caps. No categories. No enrollment.<sup>‡</sup>',
-          '<strong>OR</strong> get up to <strong>60 days to pay without interest</strong>. Just pay your minimum payment due by your payment due date.<sup>‡</sup>',
+          `<strong>OR</strong> get up to <strong>60 days to pay without interest</strong>. Just pay the Minimum Due by your Payment Due date and take care of the rest when it's due.<sup>‡</sup>`,
         ],
       },
     ],
@@ -46,11 +70,11 @@ module.exports = () => {
     greatFor: [
       {
         iconKey: 'cashback',
-        label: `Earn <strong>unlimited 1.5% cash back</strong> automatically when you pay in 10 days. No caps. No categories. No enrollment.`,
+        label: `Earn <strong>unlimited 1.5% cash back</strong> automatically when you pay in 10 days. No caps. No categories. No enrollment.<sup>‡</sup>`,
       },
       {
         iconKey: 'calendar',
-        label: `<strong>OR</strong> get up to <strong>60 days to pay without interest</strong>. Just pay your minimum payment due by your payment due date.`,
+        label: `<strong>OR</strong> get up to <strong>60 days to pay without interest</strong>. . Just pay the Minimum Due by your Payment Due date and take care of the rest when it's due.<sup>‡</sup>`,
       },
     ],
     welcomeOffer: [],
@@ -74,7 +98,7 @@ module.exports = () => {
       },
       {
         kind: 'p',
-        content: `<strong>Up to 60 days to pay without interest</strong>. Just pay your minimum payment due by your payment due date.<sup>‡</sup>`,
+        content: `<strong>Up to 60 days to pay without interest</strong>. Just pay the Minimum Due by your Payment Due date and take care of the rest when it's due.<sup>‡</sup>`,
       },
     ],
     moreBenefits: [
@@ -84,7 +108,7 @@ module.exports = () => {
       },
       {
         kind: 'p',
-        content: `Save on your expenses with the Card that earns unlimited cash back. There are no caps on earnings and no categories to meet – just automatic 1.5% cash back on the amount paid within 10 days of your statement closing date. Simply pay your Minimum Payment Due by your Payment Due Date and see the discount applied to your next statement that you can add to your bottom line.<sup>‡</sup>`,
+        content: `Save on your expenses with the Card that earns unlimited cash back. There are no caps on earnings and no categories to meet - just automatic 1.5% cash back on eligible charges when you pay within 10 days of your statement closing date. Simply pay your Minimum Payment Due by your Payment Due Date and see the discount applied to your next statement that you can add to your bottom line.`,
       },
       {
         kind: 'heading-3',

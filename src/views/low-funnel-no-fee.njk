@@ -1,5 +1,9 @@
 {% extends "./partials/base.njk" %}
 
+{%- block omniture %}
+{% include './partials/nofee-omniture.njk' %}
+{% endblock %}
+
 {%- block before_main %}
 {% include './partials/header.njk' %}
 {% endblock %}
