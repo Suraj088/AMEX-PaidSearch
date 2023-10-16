@@ -165,5 +165,23 @@ module.exports = () => {
         content: `Travel anywhere in the world, knowing you won’t be charged a foreign transaction fee from American Express when you use your Card<sup>‡</sup>`,
       },
     ],
+    highlights:{
+      payOverTime:false,
+      noPresetSpendingLimit:false,
+      employeeCards:true,
+      connectToQuickBook:false,
+      vendorPayByBillcom:false,
+      payWithPoints:false,
+      noForeignTransactionFees:true,
+      theHotelCollection:false,
+      purchaseProtection:true,
+      carRentalLossAndDamageInsurance:true,
+      globalAssistHotline:false,
+      wirelessCredit:false,
+      airlineBonus:false,
+      globalLoungeCollection:false,
+      feeCreditForGlobalEntryorTSAPreCheck:false,
+      priorityBoarding:false,
+      },
   };
 };

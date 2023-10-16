@@ -139,5 +139,23 @@ module.exports = () => {
         content: `Whenever you travel more than 100 miles from home, Global Assist® Hotline<sup>‡</sup> is available for 24/7 emergency assistance and coordination services, including medical and legal referrals, emergency cash wires, and missing luggage assistance. Card Members are responsible for the costs charged by third-party service providers.  Other terms and conditions apply.`,
       },
     ],
+    highlights:{
+      payOverTime:false,
+      noPresetSpendingLimit:false,
+      employeeCards:true,
+      connectToQuickBook:false,
+      vendorPayByBillcom:true,
+      payWithPoints:false,
+      noForeignTransactionFees:false,
+      theHotelCollection:false,
+      purchaseProtection:true,
+      carRentalLossAndDamageInsurance:true,
+      globalAssistHotline:true,
+      wirelessCredit:false,
+      airlineBonus:false,
+      globalLoungeCollection:false,
+      feeCreditForGlobalEntryorTSAPreCheck:false,
+      priorityBoarding:false,
+      },
   };
 };

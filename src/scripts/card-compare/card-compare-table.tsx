@@ -110,6 +110,8 @@ export function CardCompareTable(): JSX.Element | null {
     );
   }
 
+  console.log(itemState,'just now')
+
   const navigateToUrl = (val: string) => {
     window.open('../' + val, '_self');
   };
@@ -135,7 +137,9 @@ export function CardCompareTable(): JSX.Element | null {
     
          <Compare 
           itemState={itemState}
->
+>         columnClass={columnClass}
+          greatForIndexHelper={greatForIndexHelper}
+          activeItemIndex={activeItemIndex}
           </Compare>
           
        

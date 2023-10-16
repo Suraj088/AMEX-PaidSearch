@@ -192,5 +192,23 @@ module.exports = () => {
         content: `Want even more flexibility? Take up to $50 off the cost of your Ticket for every 5,000 miles you redeem with Pay with Miles when you book on delta.com.<sup>‡</sup>`,
       },
     ],
+    highlights:{
+      payOverTime:false,
+      noPresetSpendingLimit:false,
+      employeeCards:true,
+      connectToQuickBook:false,
+      vendorPayByBillcom:false,
+      payWithPoints:false,
+      noForeignTransactionFees:false,
+      theHotelCollection:false,
+      purchaseProtection:true,
+      carRentalLossAndDamageInsurance:true,
+      globalAssistHotline:false,
+      wirelessCredit:false,
+      airlineBonus:false,
+      globalLoungeCollection:false,
+      feeCreditForGlobalEntryorTSAPreCheck:false,
+      priorityBoarding:true,
+      },
   };
 };

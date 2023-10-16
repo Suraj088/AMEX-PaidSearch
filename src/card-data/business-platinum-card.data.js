@@ -259,6 +259,24 @@
         extraClasses: 'legal-1 margin-1-t',
       },
     ],
+    highlights:{
+      payOverTime:true,
+      noPresetSpendingLimit:false,
+      employeeCards:true,
+      connectToQuickBook:false,  
+      vendorPayByBillcom:false, 
+      payWithPoints:true,   
+      noForeignTransactionFees:false,
+      theHotelCollection:false,
+      purchaseProtection:true,
+      carRentalLossAndDamageInsurance:true,
+      globalAssistHotline:false,
+      wirelessCredit:true,
+      airlineBonus:true,
+      globalLoungeCollection:true,
+      feeCreditForGlobalEntryorTSAPreCheck:false,
+      priorityBoarding:false,
+      },
     
   };
 };

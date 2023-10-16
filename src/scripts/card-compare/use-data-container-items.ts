@@ -14,9 +14,22 @@ export interface CardDynamicIconRowNode {
 }
 
 export interface CardDynamicHighLights {
-  payOverTime:string,
-  noPresetSpendingLimit:string,
-  
+  payOverTime:boolean,
+  noPresetSpendingLimit:boolean,
+  employeeCards:boolean,
+  connectToQuickBook:boolean,
+  vendorPayByBillcom:boolean,
+  payWithPoints:boolean,
+  noForeignTransactionFees:boolean,
+  theHotelCollection:boolean,
+  purchaseProtection:boolean,
+  carRentalLossAndDamageInsurance:boolean,
+  globalAssistHotline:boolean,
+  wirelessCredit:boolean,
+  airlineBonus:boolean,
+  globalLoungeCollection:boolean,
+  feeCreditForGlobalEntryorTSAPreCheck:boolean,
+  priorityBoarding:boolean,
 }
 
 export interface CardDynamicData {

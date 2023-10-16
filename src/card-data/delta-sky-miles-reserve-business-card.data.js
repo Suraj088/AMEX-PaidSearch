@@ -214,5 +214,23 @@ module.exports = () => {
         content: `[1] To read the full terms and conditions, visit <a href="https://www.americanexpress.com/expeditedtravel">www.americanexpress.com/expeditedtravel</a>`,
       },
     ],
+    highlights:{
+      payOverTime:false,
+      noPresetSpendingLimit:false,
+      employeeCards:true,
+      connectToQuickBook:true,
+      vendorPayByBillcom:false,
+      payWithPoints:false,
+      noForeignTransactionFees:false,
+      theHotelCollection:false,
+      purchaseProtection:true,
+      carRentalLossAndDamageInsurance:true,
+      globalAssistHotline:false,
+      wirelessCredit:false,
+      airlineBonus:false,
+      globalLoungeCollection:false,
+      feeCreditForGlobalEntryorTSAPreCheck:true,
+      priorityBoarding:true,
+      },
   };
 };

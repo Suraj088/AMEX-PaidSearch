@@ -167,6 +167,24 @@
         content: `Spend $40,000 on eligible purchases on your Card in a calendar year and you can earn an upgrade to Hilton Honors Diamond status through the end of the next calendar year.<sup>‡</sup>`,
       },
     ],
+    highlights:{
+      payOverTime:false,
+      noPresetSpendingLimit:false,
+      employeeCards:true,
+      connectToQuickBook:false,
+      vendorPayByBillcom:false,
+      payWithPoints:false,
+      noForeignTransactionFees:false,
+      theHotelCollection:false,
+      purchaseProtection:true,
+      carRentalLossAndDamageInsurance:true,
+      globalAssistHotline:false,
+      wirelessCredit:false,
+      airlineBonus:false,
+      globalLoungeCollection:false,
+      feeCreditForGlobalEntryorTSAPreCheck:false,
+      priorityBoarding:false,
+      },
    
   };
 };

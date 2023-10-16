@@ -193,5 +193,23 @@ module.exports = () => {
         content: `You and up to two guests can enjoy snacks and beverages, Wi-Fi access, satellite TV, newspapers and magazines, personalized flight assistance, private restrooms and more at Delta Sky Club<sup>®</sup> for a per-visit rate of $50 per person.<sup>‡</sup>`,
       },
     ],
+    highlights:{
+      payOverTime:false,
+      noPresetSpendingLimit:false,
+      employeeCards:true,
+      connectToQuickBook:false,
+      vendorPayByBillcom:false,
+      payWithPoints:false,
+      noForeignTransactionFees:false,
+      theHotelCollection:false,
+      purchaseProtection:true,
+      carRentalLossAndDamageInsurance:true,
+      globalAssistHotline:false,
+      wirelessCredit:true,
+      airlineBonus:false,
+      globalLoungeCollection:false,
+      feeCreditForGlobalEntryorTSAPreCheck:false,
+      priorityBoarding:false,
+      },
   };
 };

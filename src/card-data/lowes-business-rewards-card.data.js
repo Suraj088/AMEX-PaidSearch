@@ -180,5 +180,23 @@ module.exports = () => {
         content: `Take advantage of Vendor Pay by Bill.com by enrolling your Card. With the Basic plan, there is no monthly fee for the first user and no fee for a second user for six months. After six months, the second user will have a fee of $15 per month. Additional fees may apply based on plan type and number of users.<sup>‡</sup>`,
       },
     ],
+    highlights:{
+      payOverTime:false,
+      noPresetSpendingLimit:false,
+      employeeCards:true,
+      connectToQuickBook:true,
+      vendorPayByBillcom:true,
+      payWithPoints:false,
+      noForeignTransactionFees:false,
+      theHotelCollection:false,
+      purchaseProtection:true,
+      carRentalLossAndDamageInsurance:true,
+      globalAssistHotline:false,
+      wirelessCredit:false,
+      airlineBonus:false,
+      globalLoungeCollection:false,
+      feeCreditForGlobalEntryorTSAPreCheck:false,
+      priorityBoarding:false,
+      },
   };
 };

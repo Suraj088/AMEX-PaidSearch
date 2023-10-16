@@ -143,5 +143,23 @@ module.exports = () => {
         content: `Save time with auto-expense categorization in QuickBooks— Once enrolled, your Business Card transactions are automatically tagged with your QuickBooks categories.<sup>‡</sup>`,
       },
     ],
+    highlights:{
+      payOverTime:false,
+      noPresetSpendingLimit:true,
+      employeeCards:true,
+      connectToQuickBook:true,
+      vendorPayByBillcom:false,
+      payWithPoints:false,
+      noForeignTransactionFees:false,
+      theHotelCollection:false,
+      purchaseProtection:true,
+      carRentalLossAndDamageInsurance:true,
+      globalAssistHotline:false,
+      wirelessCredit:false,
+      airlineBonus:false,
+      globalLoungeCollection:false,
+      feeCreditForGlobalEntryorTSAPreCheck:false,
+      priorityBoarding:false,
+      },
   };
 };
